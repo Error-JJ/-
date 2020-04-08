@@ -21,10 +21,10 @@
 
 <swiper class="swiper" current="{{choose_index}}" bindchange="change">
     <swiper-item >
-<!-- 内容 -->
+<!-- 全部 -->
 <scroll-view scroll-y="{{true}}" scroll-x="{{true}}" class="place">
-<view class="repair_place">
-    <view class="repair_place2" wx:for="{{mes0}}">
+<view class="repair_place" wx:for="{{mes0}}">
+    <view class="repair_place2" >
         <view class="repair_title">
             <text >{{item.title}}</text>
         </view>
@@ -40,7 +40,7 @@
 </swiper-item>
 
     <swiper-item >
-<!-- 内容 -->
+<!-- 待处理 -->
 <scroll-view scroll-y="{{true}}" scroll-x="{{true}}" class="place">
 <view class="repair_place">
     <view class="repair_place2" wx:for="{{mes1}}">
@@ -59,7 +59,7 @@
 </swiper-item>
 
     <swiper-item >
-<!-- 内容 -->
+<!-- 抢救中 -->
 <scroll-view scroll-y="{{true}}" scroll-x="{{true}}" class="place">
 <view class="repair_place">
     <view class="repair_place2" wx:for="{{mes2}}">
@@ -78,7 +78,7 @@
 </swiper-item>
 
     <swiper-item >
-<!-- 内容 -->
+<!-- 已完成 -->
 <scroll-view scroll-y="{{true}}" scroll-x="{{true}}" class="place">
 <view class="repair_place">
     <view class="repair_place2" wx:for="{{mes3}}">
@@ -99,8 +99,10 @@
 
 </swiper>
 
-<view class="placard_bottom">
-    <navigator src="">
-    </navigator>
-</view>
+<!-- 填写报修 -->
+<navigator url="../creat_placard/creat_placard">
+    <view class="placard_bottom">
+        <text class="iconfont icon-icon bottom_icon"></text>
+    </view>
+</navigator>
 

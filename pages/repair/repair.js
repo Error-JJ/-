@@ -9,6 +9,7 @@ Page({
     choose2:false,
     choose3:false,
     choose4:false,
+    choose_index:0,
     mes0:[{
       title:"全部",
       mes:"爆水管加停电",
@@ -32,7 +33,10 @@ Page({
   },
 
   //滑动界面
-  change:function(){
+  change:function(e){
+    this.setData({
+      choose_index:e.detail.current
+    });
     switch(this.data.choose_index){
       case 0:this.setData({
         choose1:true,
@@ -40,33 +44,33 @@ Page({
     choose3:false,
     choose4:false,
       });
+      break;
       case 1:this.setData({
-        choose1:true,
-    choose2:false,
+        choose1:false,
+    choose2:true,
     choose3:false,
     choose4:false,
       });
+      break;
       case 2:this.setData({
-        choose1:true,
+        choose1:false,
     choose2:false,
-    choose3:false,
+    choose3:true,
     choose4:false,
       });
+      break;
       case 3:this.setData({
-        choose1:true,
+        choose1:false,
     choose2:false,
     choose3:false,
-    choose4:false,
+    choose4:true,
       });
+      break;
     }
   },
   //全部报修
   find_all:function(){
     this.setData({
-      choose1:true,
-    choose2:false,
-    choose3:false,
-    choose4:false,
     choose_index:0,
     })
   },
@@ -74,10 +78,7 @@ Page({
   //待处理报修
   find_wait:function(){
     this.setData({
-      choose1:false,
-    choose2:true,
-    choose3:false,
-    choose4:false,
+
     choose_index:1,
     })
   },
@@ -85,10 +86,7 @@ Page({
    //抢修中报修
    find_doing:function(){
     this.setData({
-      choose1:false,
-    choose2:false,
-    choose3:true,
-    choose4:false,
+
     choose_index:2,
     })
   },
@@ -96,10 +94,7 @@ Page({
    //已完成报修
    find_complete:function(){
     this.setData({
-      choose1:false,
-    choose2:false,
-    choose3:false,
-    choose4:true,
+
     choose_index:3,
     })
   },

@@ -25,7 +25,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.2",
-	"appid": "wxaf00dcdf0a30a192",
+	"appid": "wx8375454979029a5a",
 	"projectname": "text1",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -59,8 +59,8 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "pages/repair/repair",
-					"pathName": "pages/repair/repair",
+					"name": "pages/myself/myself",
+					"pathName": "pages/myself/myself",
 					"query": "",
 					"scene": null
 				}

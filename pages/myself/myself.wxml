@@ -1,5 +1,10 @@
-<!-- pages/myself/myself.wxml -->
+<!-- 顶部导航栏 -->
 <view class="top">
+    <image src="../../pic/22.jpg" class="top_img" catchtap='navmap' />
+    <view class="title">社区</view>
+</view>
+<!-- 内容 -->
+<view class="top1">
     <view wx:if="{{userinfo}}" class="top_img_place">
         <image mode="aspectFill" class="top_img_pic" src="{{userinfo.userInfo.avatarUrl}}"></image>
         <view class="top_user_place">

@@ -48,14 +48,13 @@ page{
             border-bottom: solid 8rpx rgb(122, 0, 0);
         }
         .false_choose{
-            color: rgba(255, 255, 255, 0.884);
-            border-bottom: solid 8rpx #fff;
+            color: #dddddd;
+            border-bottom: solid 8rpx #dddddd;
         }
     }
 }
 .swiper{
-    border-style: solid;
-    height: 1320rpx;
+    height: 1330rpx;
 .place{
     width: 100%;
     position: absolute;
@@ -98,12 +97,21 @@ page{
 
 
 
-.placard_bottom{
-    width: 40px;
-    height: 40px;
-    background-color: rgba(0, 0, 0, 0.623);
+.placard_bottom {
+    width: 90rpx;
+    height: 90rpx;
+    background-color: rgba(0, 0, 0, 0.664);
     position: fixed;
-    top:87%;
-    right: 7%;
-border-radius: 50%;
+    top: 87%;
+    right: 5%;
+    border-radius: 50%;
+    text-align: center;
+
+    .bottom_icon {
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        font-size: 45rpx;
+        transform: translate(-50%, -50%);
+    }
 }
