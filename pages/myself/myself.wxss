@@ -1,0 +1,79 @@
+:root {
+  --themeColor: #3ba7ff;
+}
+page {
+  background-color: #e9e9e9;
+}
+.top {
+  height: 46vh;
+  background-color: #fff;
+}
+.top .top_img_place {
+  position: relative;
+}
+.top .top_img_place .top_img_pic {
+  height: 45vh;
+  filter: blur(15rpx);
+}
+.top .top_img_place .top_user_place {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+.top .top_img_place .top_user_place .top_user_icon {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+.top .top_img_place .top_user_place .top_user_name {
+  color: black;
+  margin-top: 40rpx;
+  font-size: 40rpx;
+}
+.top .top_load {
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  transform: translateX(-50%);
+}
+.top .top_load .top_load_btn {
+  background-color: #3ba7ff;
+  width: 200rpx;
+}
+.myself_bottom {
+  margin-top: 15px;
+}
+.myself_bottom .identity {
+  background-color: #fff;
+  top: 30%;
+  padding-left: 5px;
+  height: 120rpx;
+  border-bottom: solid;
+  border-bottom-width: 1px;
+  border-color: #c0c0c0;
+  position: relative;
+}
+.myself_bottom .identity .identity_coin {
+  border-style: none;
+  width: 13%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 9%;
+  transform: translate(-50%, -50%);
+}
+.myself_bottom .identity .identity_coin .identity_text {
+  font-size: 200%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #3b3b3b;
+}
+.myself_bottom .identity .identity_text {
+  position: absolute;
+  top: 25%;
+  left: 20%;
+}

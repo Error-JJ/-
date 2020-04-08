@@ -1,0 +1,36 @@
+<!-- pages/myself/myself.wxml -->
+<view class="top">
+    <view wx:if="{{userinfo}}" class="top_img_place">
+        <image mode="aspectFill" class="top_img_pic" src="{{userinfo.userInfo.avatarUrl}}"></image>
+        <view class="top_user_place">
+            <image class="top_user_icon" src="{{userinfo.userInfo.avatarUrl}}"></image>
+            <view class="top_user_name">{{userinfo.userInfo.nickName}}</view>
+        </view>
+    </view>
+    <view wx:else class="top_load">
+        <button class="top_load_btn" type="primary" open-type="getUserInfo" bindgetuserinfo="load">
+            登录
+        </button>
+    </view>
+</view>
+<view class="myself_bottom">
+    <navigator url="../identity/identity">
+        <view class="identity">
+            <view class="identity_coin">
+                <text class="identity_text iconfont icon-credentials_icon"></text>
+            </view>
+            <text class="identity_text">身份认证</text>
+        </view>
+    </navigator>
+
+    <navigator url="">
+        <view class="identity">
+            <text></text>
+            <view class="identity_coin">
+                <text class="identity_text iconfont .icon-zhangdan1"></text>
+            </view>
+            <text class="identity_text">账单查看</text>
+        </view>
+    </navigator>
+
+</view>

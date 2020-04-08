@@ -1,0 +1,98 @@
+page {
+  background: linear-gradient(#fff8ed, #ffd27d);
+}
+.top {
+  width: 100%;
+  height: 130rpx;
+  overflow: hidden;
+  position: fixed;
+  z-index: 1;
+}
+.top .top_img {
+  position: relative;
+  top: -180rpx;
+  width: 100%;
+  height: 1000rpx;
+}
+.top .title {
+  font-size: 20px;
+  color: white;
+  position: fixed;
+  left: 45%;
+  top: 4%;
+}
+.top .top_back {
+  position: fixed;
+  left: 3%;
+  top: 5%;
+  color: #fff;
+}
+.input {
+  position: fixed;
+  margin-top: 131rpx;
+  width: 100%;
+  height: 1060rpx;
+  padding: 20rpx;
+  box-sizing: border-box;
+  border: solid red;
+}
+.input .input_title {
+  border-bottom: solid 1px #888888;
+  font-size: 40rpx;
+  padding-bottom: 15rpx;
+}
+.input .input_place {
+  margin-top: 20rpx;
+  border: solid;
+  left: 50%;
+  height: 100%;
+  transform: translate(-50%, 0%);
+  width: 100%;
+}
+.bottom {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #e4e4e4;
+  height: 80rpx;
+  z-index: 1;
+}
+.bottom .input_pic {
+  position: absolute;
+  width: 33%;
+  height: 80rpx;
+  border: solid;
+}
+.bottom .input_pic .pic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 40rpx;
+  transform: translate(-50%, -50%);
+}
+.bottom .input_camera {
+  position: absolute;
+  width: 33%;
+  height: 80rpx;
+  left: 34%;
+}
+.bottom .input_camera .camera {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 40rpx;
+  transform: translate(-50%, -50%);
+}
+.bottom .input_submit {
+  position: absolute;
+  width: 31%;
+  height: 80rpx;
+  right: 0;
+}
+.bottom .input_submit .sumbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 40rpx;
+  transform: translate(-50%, -50%);
+}

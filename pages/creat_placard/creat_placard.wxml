@@ -1,0 +1,21 @@
+<!-- 顶部导航栏 -->
+<view class="top">
+    <image src="../../pic/22.jpg" class="top_img" catchtap='navmap' />
+    <text class="iconfont icon-fanhui top_back" bindtap="back"></text>
+    <view class="title">发帖</view>
+</view>
+<view class="input">
+    <input class="input_title" placeholder="标题" type="text" focus="{{true}}" bindfocus="focus_title" bindinput="title_input" bindblur="repair1" value="{{title}}" />
+    <textarea class="input_place" fixed="{{true}}" placeholder="请输入内容" bindblur="repair2" cursor-spacing="100rpx" show-confirm-bar="{{false}}" bindfocus="focus_mes" value="{{mes}}" bindinput="mes_input" style="{{input_height}}"></textarea>
+</view>
+<view class="bottom " style="{{keyheight}}">
+    <view class="input_pic"  bindtap="go_pic">
+        <text bindtap="go_pic" class="iconfont icon-zhaopian pic "></text>
+    </view>
+    <view class="input_camera">
+        <text bindtap="go_camera" class="iconfont icon-xiangji camera"></text>
+    </view>
+    <view class="input_submit">
+        <text bindtap="sumbita" class="sumbit iconfont icon-tijiao"></text>
+    </view>
+</view>

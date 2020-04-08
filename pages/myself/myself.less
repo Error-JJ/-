@@ -1,0 +1,91 @@
+:root {
+    --themeColor: rgb(59, 167, 255);
+}
+
+page {
+    background-color: rgb(233, 233, 233);
+}
+
+.top {
+    height: 46vh;
+    background-color: #fff;
+
+    .top_img_place {
+        position: relative;
+
+        .top_img_pic {
+            height: 45vh;
+            filter: blur(15rpx)
+        }
+
+        .top_user_place {
+            position: absolute;
+            left: 50%;
+            top: 20%;
+            transform: translateX(-50%);
+            text-align: center;
+
+            .top_user_icon {
+                width: 150rpx;
+                height: 150rpx;
+                border-radius: 50%;
+            }
+
+            .top_user_name {
+                color: black;
+                margin-top: 40rpx;
+                font-size: 40rpx;
+            }
+        }
+    }
+
+    .top_load {
+        position: absolute;
+        left: 50%;
+        top: 15%;
+        transform: translateX(-50%);
+
+        .top_load_btn {
+            background-color: rgb(59, 167, 255);
+            width: 200rpx;
+        }
+    }
+}
+
+.myself_bottom {
+    margin-top: 15px;
+    .identity {
+        background-color: #fff;
+        top: 30%;
+        padding-left: 5px;
+        height: 120rpx;
+        border-bottom: solid;
+        border-bottom-width: 1px;
+        border-color: rgb(192, 192, 192);
+        position: relative;
+
+        .identity_coin{
+            border-style: none;
+            width: 13%;
+            height: 60%;
+            position: absolute;
+            top: 50%;   
+            left: 9%;        
+            transform: translate(-50%,-50%);
+            .identity_text{
+                font-size: 200%;
+                position: absolute;
+                top: 50%;   
+                left: 50%;        
+                transform: translate(-50%,-50%);
+                color: rgb(59, 59, 59);
+            }
+        }
+
+        .identity_text {
+            position: absolute;
+            top: 25%;
+            left: 20%;
+        }
+    }
+}

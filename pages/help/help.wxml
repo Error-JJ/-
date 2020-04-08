@@ -1,0 +1,55 @@
+<!-- 背景 -->
+<view class="bg1"></view>
+<view class="bg2"></view>
+<view class="bg3"></view>
+<view class="bg4"></view>
+<!-- 顶部导航栏 -->
+<view class="top">
+    <image src="../../pic/22.jpg" class="top_img" catchtap='navmap' />
+    <view class="title">服务</view>
+    <view class="top_text">
+        <text class="iconfont icon-nvhai top_icon"></text>
+        <text class="">：需要，什么帮助吗?</text>
+    </view>
+</view>
+<!-- 中间大圆 -->
+<view class="cent_place">
+    <text src="" class="cent_pic iconfont icon-kefu"></text>
+    <text class="cent_title">客服</text>
+</view>
+<!-- 报修图标 -->
+<view class="service_place coor1">
+    <navigator src="">
+        <view class="mes_pic_place q1">
+            <text src="" class="mes_pic iconfont icon-shenbao"></text>
+        </view>
+    </navigator>
+    <text class="mes_title">报修</text>
+</view>
+<!-- 申报图标 -->
+<view class="service_place coor2">
+    <navigator src="">
+        <view class="mes_pic_place q2">
+            <text src="" class="mes_pic iconfont icon-wuyebaoxiu"></text>
+        </view>
+    </navigator>
+    <text class="mes_title">申报</text>
+</view>
+<!-- 帮助图标 -->
+<view class="service_place coor3">
+    <navigator src="">
+        <view class="mes_pic_place q3">
+            <text src="" class="mes_pic iconfont icon-qiuzhu"></text>
+        </view>
+    </navigator>
+    <text class="mes_title">帮助</text>
+</view>
+<!-- 投诉图标 -->
+<view class="service_place coor4">
+    <navigator src="">
+        <view class="mes_pic_place q4">
+            <text src="" class="mes_pic iconfont icon-tousu"></text>
+        </view>
+    </navigator>
+    <text class="mes_title">投诉</text>
+</view>

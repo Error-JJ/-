@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/help/help",
+    "pages/comm/comm",
+    "pages/myself/myself",
+    "pages/first/first" ,
+    "pages/identity/identity",
+    "pages/placard/placard",
+    "pages/creat_placard/creat_placard",
+    "pages/repair/repair"
+  ],
+  "window": {
+    "navigationStyle":"custom",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f15354",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/first/first",
+        "text": "首页",
+        "iconPath": "pic/first0.png",
+        "selectedIconPath": "pic/first1.png"
+      },
+      {
+        "pagePath": "pages/comm/comm",
+        "text": "社区",
+        "iconPath": "pic/comm0.png",
+        "selectedIconPath": "pic/comm1.png"
+      },
+      {
+        "pagePath": "pages/help/help",
+        "text": "服务",
+        "iconPath": "pic/service0.png",
+        "selectedIconPath": "pic/service1.png"
+      },
+      {
+        "pagePath": "pages/myself/myself",
+        "text": "我的",
+        "iconPath": "pic/myself0.png",
+        "selectedIconPath": "pic/myself1.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+<!-- 顶部导航栏 -->
+<view class="top">
+    <image src="../../pic/22.jpg" class="top_img" catchtap='navmap' />
+    <view class="title">社区</view>
+</view>
+<!-- 帖 -->
+<scroll-view scroll-y style="width: 100%; height: 90%; position: absolute;top:130rpx" refresher-enabled="{{true}}" refresher-threshold="{{100}}" refresher-default-style="black" refresher-background="#fff" refresher-triggered="{{triggered}}" bindrefresherpulling="onPulling" bindrefresherrefresh="onRefresh" bindrefresherrestore="onRestore" bindrefresherabort="onAbort">
+    <view class="comm">
+        <view wx:for="{{ fourm }}">
+            <navigator url="../placard/placard?forum_id={{ forum_id }}&&title={{item.forum_title}}" open-type="navigate">
+                <view class="comm_place {{index%2==0?'one':'two'}}">
+                    <!-- 帖子标题 -->
+                    <text class="comm_title">{{item.forum_title}}</text>
+                    <!-- 用户信息 -->
+                    <view class="comm_user">
+                        <view class="left">
+                            <text class="iconfont icon-wode name_ico"></text>
+                            <text class="comm_name" decode="true">&nbsp;{{ item.forum_name }}</text>
+                        </view>
+                        <!-- 回帖时间人数 -->
+                        <view class="right">
+                            <text class="iconfont icon-shijian icon_time"></text>
+                            <text decode="true">{{ item.fourm_date }}&nbsp;</text>
+                            <text class="iconfont icon-taolun comm_num_icon"></text>
+                            <text class="comm_num" decode="true">&nbsp;{{ item.forum_sum }}</text>
+                        </view>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </view>
+</scroll-view>
+<!-- 回到顶部 -->
+<view class="go_top" bindtap="go_top" >
+    <text class="iconfont icon-top to_top_icon"></text>
+</view>
+<!-- 发帖 -->
+<navigator url="../creat_placard/creat_placard">
+    <view class="placard_bottom">
+        <text class="iconfont icon-icon bottom_icon"></text>
+    </view>
+</navigator>

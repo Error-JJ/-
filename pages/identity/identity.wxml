@@ -1,0 +1,19 @@
+<form >
+<view class="input_place">
+    <view class="name">
+        <text class="iconfont icon-wode name-icon"></text>
+        <input class="name_input" placeholder="姓名"></input>
+    </view>
+    <view class="id">
+        <text class="iconfont icon-credentials_icon id-icon"></text>
+        <input class="id_input" placeholder="身份证号码"></input>
+    </view>
+    <view class="room">
+        <text class="iconfont icon-gwxxzhusuodizhi room-icon"></text>
+        <input class="room_input" placeholder="门牌号"></input>
+    </view>
+</view>
+<button class=".identity_btn" type="submit" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
+        disabled="{{disabled}}" bindtap="default" hover-class="other-button-hover"> 
+        提交 </button>
+</form>

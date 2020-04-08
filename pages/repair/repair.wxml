@@ -1,0 +1,106 @@
+<!-- 顶部导航栏 -->
+<view class="top">
+    <image src="../../pic/22.jpg" class="top_img" catchtap='navmap' />
+    <text class="iconfont icon-fanhui top_back" bindtap="back"></text>
+    <view class="title">报修</view>
+    <view class="choose" >
+        <view bindtap="find_all" class="choose_place {{choose1?'true_choose':'false_choose'}}">
+            <text>全部</text>
+        </view>
+        <view bindtap="find_wait" class="choose_place {{choose2?'true_choose':'false_choose'}}">
+            <text>待处理</text>
+        </view>
+        <view bindtap="find_doing" class="choose_place {{choose3?'true_choose':'false_choose'}}">
+            <text>抢救中</text>
+        </view>
+        <view bindtap="find_complete" class="choose_place {{choose4?'true_choose':'false_choose'}}">
+            <text>已完成</text>
+        </view>
+    </view>
+</view>
+
+<swiper class="swiper" current="{{choose_index}}" bindchange="change">
+    <swiper-item >
+<!-- 内容 -->
+<scroll-view scroll-y="{{true}}" scroll-x="{{true}}" class="place">
+<view class="repair_place">
+    <view class="repair_place2" wx:for="{{mes0}}">
+        <view class="repair_title">
+            <text >{{item.title}}</text>
+        </view>
+        <view class="repair_mes">
+            <text >{{item.mes}}</text>
+        </view>
+        <view class="repair_date">
+            <text>{{item.date}}</text>
+        </view>
+    </view>  
+</view>
+</scroll-view>
+</swiper-item>
+
+    <swiper-item >
+<!-- 内容 -->
+<scroll-view scroll-y="{{true}}" scroll-x="{{true}}" class="place">
+<view class="repair_place">
+    <view class="repair_place2" wx:for="{{mes1}}">
+        <view class="repair_title">
+            <text >{{item.title}}</text>
+        </view>
+        <view class="repair_mes">
+            <text >{{item.mes}}</text>
+        </view>
+        <view class="repair_date">
+            <text>{{item.date}}</text>
+        </view>
+    </view>  
+</view>
+</scroll-view>
+</swiper-item>
+
+    <swiper-item >
+<!-- 内容 -->
+<scroll-view scroll-y="{{true}}" scroll-x="{{true}}" class="place">
+<view class="repair_place">
+    <view class="repair_place2" wx:for="{{mes2}}">
+        <view class="repair_title">
+            <text >{{item.title}}</text>
+        </view>
+        <view class="repair_mes">
+            <text >{{item.mes}}</text>
+        </view>
+        <view class="repair_date">
+            <text>{{item.date}}</text>
+        </view>
+    </view>  
+</view>
+</scroll-view>
+</swiper-item>
+
+    <swiper-item >
+<!-- 内容 -->
+<scroll-view scroll-y="{{true}}" scroll-x="{{true}}" class="place">
+<view class="repair_place">
+    <view class="repair_place2" wx:for="{{mes3}}">
+        <view class="repair_title">
+            <text >{{item.title}}</text>
+        </view>
+        <view class="repair_mes">
+            <text >{{item.mes}}</text>
+        </view>
+        <view class="repair_date">
+            <text>{{item.date}}</text>
+        </view>
+    </view>  
+</view>
+</scroll-view>
+</swiper-item>
+
+
+</swiper>
+
+<view class="placard_bottom">
+    <navigator src="">
+    </navigator>
+</view>
+

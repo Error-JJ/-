@@ -1,0 +1,106 @@
+.top {
+  width: 100%;
+  height: 130rpx;
+  overflow: hidden;
+  position: fixed;
+  z-index: 1;
+}
+.top .top_img {
+  position: relative;
+  top: -180rpx;
+  width: 100%;
+  height: 1000rpx;
+}
+.top .title {
+  font-size: 20px;
+  color: white;
+  position: fixed;
+  left: 45%;
+  top: 4%;
+}
+.comm {
+  position: absolute;
+  top: 0rpx;
+  width: 100%;
+}
+.comm .one {
+  background: #fff;
+}
+.comm .two {
+  background-color: #fffdf5;
+}
+.comm .comm_place {
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  padding-top: 20rpx;
+  border-bottom: solid 1px #b2b2b2;
+}
+.comm .comm_place .comm_title {
+  font-size: 34rpx;
+  letter-spacing: 1.5rpx;
+}
+.comm .comm_place .comm_user {
+  margin-top: 30rpx;
+  vertical-align: bottom;
+  font-size: small;
+  color: #888888;
+  margin-bottom: 5rpx;
+}
+.comm .comm_place .comm_user .left {
+  display: inline-block;
+}
+.comm .comm_place .comm_user .left .name_ico {
+  color: #2c76e4;
+  font-weight: 600;
+  font-size: 28rpx;
+}
+.comm .comm_place .comm_user .left .comm_name {
+  font-size: 28rpx;
+}
+.comm .comm_place .comm_user .right {
+  float: right;
+}
+.comm .comm_place .comm_user .right .comm_num_icon {
+  font-size: 28rpx;
+  color: #1bac16;
+}
+.comm .comm_place .comm_user .right .icon_time {
+  color: #f55246;
+}
+.comm .comm_place .comm_user .right .comm_num {
+  font-size: 28rpx;
+}
+.go_top {
+  width: 90rpx;
+  height: 90rpx;
+  background-color: #888888;
+  position: fixed;
+  top: 79%;
+  right: 5%;
+  border-radius: 50%;
+  text-align: center;
+}
+.go_top .to_top_icon {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  font-size: 50rpx;
+  transform: translate(-50%, -50%);
+}
+.placard_bottom {
+  width: 90rpx;
+  height: 90rpx;
+  background-color: #888888;
+  position: fixed;
+  top: 87%;
+  right: 5%;
+  border-radius: 50%;
+  text-align: center;
+}
+.placard_bottom .bottom_icon {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  font-size: 45rpx;
+  transform: translate(-50%, -50%);
+}
