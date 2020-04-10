@@ -16,40 +16,49 @@
 <view class="cent_place">
     <text src="" class="cent_pic iconfont icon-kefu"></text>
     <text class="cent_title">客服</text>
+    <button plain="{{true}}" open-type="contact" class="cent_btn"></button>
 </view>
 <!-- 报修图标 -->
+<navigator url="../repair/repair">
 <view class="service_place coor1">
-    <navigator src="">
+    
         <view class="mes_pic_place q1">
             <text src="" class="mes_pic iconfont icon-shenbao"></text>
         </view>
-    </navigator>
+    
     <text class="mes_title">报修</text>
 </view>
+</navigator>
 <!-- 申报图标 -->
+<navigator url="../apply/apply">
 <view class="service_place coor2">
-    <navigator src="">
+    
         <view class="mes_pic_place q2">
             <text src="" class="mes_pic iconfont icon-wuyebaoxiu"></text>
         </view>
-    </navigator>
+    
     <text class="mes_title">申报</text>
 </view>
+</navigator>
 <!-- 帮助图标 -->
+<navigator url="">
 <view class="service_place coor3">
-    <navigator src="">
+    
         <view class="mes_pic_place q3">
             <text src="" class="mes_pic iconfont icon-qiuzhu"></text>
         </view>
-    </navigator>
+    
     <text class="mes_title">帮助</text>
 </view>
+</navigator>
 <!-- 投诉图标 -->
+<navigator url="../complaint/complaint">
 <view class="service_place coor4">
-    <navigator src="">
+    
         <view class="mes_pic_place q4">
             <text src="" class="mes_pic iconfont icon-tousu"></text>
         </view>
-    </navigator>
+    
     <text class="mes_title">投诉</text>
 </view>
+</navigator>

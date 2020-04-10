@@ -4,7 +4,7 @@
     <view class="title">社区</view>
 </view>
 <!-- 帖 -->
-<scroll-view scroll-y style="width: 100%; height: 90%; position: absolute;top:130rpx" refresher-enabled="{{true}}" refresher-threshold="{{100}}" refresher-default-style="black" refresher-background="#fff" refresher-triggered="{{triggered}}" bindrefresherpulling="onPulling" bindrefresherrefresh="onRefresh" bindrefresherrestore="onRestore" bindrefresherabort="onAbort">
+<scroll-view scroll-top="{{scrolltop}}" scroll-y style="width: 100%; height: 90%; position: absolute;top:130rpx" refresher-enabled="{{true}}" refresher-threshold="{{50}}" refresher-default-style="black" refresher-background="#fff" refresher-triggered="{{triggered}}"  bindrefresherrefresh="onRefresh" scroll-with-animation="{{true}}">
     <view class="comm">
         <view wx:for="{{ fourm }}">
             <navigator url="../placard/placard?forum_id={{ forum_id }}&&title={{item.forum_title}}" open-type="navigate">

@@ -7,6 +7,9 @@
     "pages/identity/identity",
     "pages/placard/placard",
     "pages/creat_placard/creat_placard",
+    "pages/apply/apply",
+    "pages/complaint/complaint",
+    "pages/request/request",
     "pages/repair/repair"
   ],
   "window": {

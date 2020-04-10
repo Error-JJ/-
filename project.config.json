@@ -59,8 +59,15 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "pages/myself/myself",
-					"pathName": "pages/myself/myself",
+					"name": "pages/request/request",
+					"pathName": "pages/request/request",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/help/help",
+					"pathName": "pages/help/help",
 					"query": "",
 					"scene": null
 				}

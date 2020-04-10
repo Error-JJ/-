@@ -1,0 +1,14 @@
+<!-- 顶部导航栏 -->
+<view class="top">
+    <image src="../../pic/22.jpg" class="top_img" catchtap='navmap' />
+    <text class="iconfont icon-fanhui top_back" bindtap="back"></text>
+    <view class="title">投诉</view>
+</view>
+<!-- 输入 -->
+<view class="input">
+    <!-- 内容 -->
+    <textarea class="input_place" maxlength="150" adjust-position="{{false}}" placeholder="请输入内容" bindblur="repair2" cursor-spacing="100rpx" show-confirm-bar="{{false}}"  value="{{mes}}" bindinput="mes_input" style="{{input_height}}"></textarea>
+    <text class="input_sum">{{now}}/{{max}}</text>
+    <view type="warn" class="input_btn" bindtap="sumbit">提交</view>
+</view>
+

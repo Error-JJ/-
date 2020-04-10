@@ -1,3 +1,6 @@
+page {
+  overflow: hidden;
+}
 .top {
   width: 100%;
   height: 130rpx;
@@ -27,7 +30,7 @@
   background: #fff;
 }
 .comm .two {
-  background-color: #fffdf5;
+  background-color: #fff8eb;
 }
 .comm .comm_place {
   padding-left: 30rpx;
@@ -73,7 +76,7 @@
 .go_top {
   width: 90rpx;
   height: 90rpx;
-  background-color: #888888;
+  background-color: rgba(0, 0, 0, 0.664);
   position: fixed;
   top: 79%;
   right: 5%;
@@ -90,7 +93,7 @@
 .placard_bottom {
   width: 90rpx;
   height: 90rpx;
-  background-color: #888888;
+  background-color: rgba(0, 0, 0, 0.664);
   position: fixed;
   top: 87%;
   right: 5%;

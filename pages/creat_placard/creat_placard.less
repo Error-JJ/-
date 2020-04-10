@@ -1,6 +1,7 @@
-page{
+page {
     background: linear-gradient(rgb(255, 248, 237), rgb(255, 210, 125));
 }
+
 .top {
     width: 100%;
     height: 130rpx;
@@ -30,76 +31,144 @@ page{
         color: #fff;
     }
 }
-.input{
+
+.input {
     position: fixed;
     margin-top: 131rpx;
     width: 100%;
-    height: 1060rpx;  
+    height: 1060rpx;
     padding: 20rpx;
     box-sizing: border-box;
-    border: solid red;
-    .input_title{
-        border-bottom:solid 1px #888888 ;
+
+    .input_title {
+        border-bottom: solid 1px #888888;
         font-size: 40rpx;
         padding-bottom: 15rpx;
     }
-    .input_place{  
-        margin-top: 20rpx;  
-        border: solid; 
+
+    .input_place {
+        margin-top: 20rpx;
         left: 50%;
         height: 100%;
-        transform: translate(-50%,0%);
+        transform: translate(-50%, 0%);
         width: 100%;
     }
 }
 
-.bottom{
+.bottom {
     position: fixed;
-    bottom:0;
+    bottom: 0;
     width: 100%;
     background-color: #e4e4e4;
     height: 80rpx;
     z-index: 1;
-    .input_pic{
+
+    .input_pic {
         position: absolute;
         width: 33%;
         height: 80rpx;
-        border: solid;
-        .pic{
+
+        .pic {
             position: absolute;
-            top:50%;
+            top: 50%;
             left: 50%;
             font-size: 40rpx;
-            transform: translate(-50%,-50%);
-            
+            transform: translate(-50%, -50%);
+
         }
     }
-    .input_camera{
+
+    .input_camera {
         position: absolute;
         width: 33%;
         height: 80rpx;
         left: 34%;
-        .camera{
+
+        .camera {
             position: absolute;
-            top:50%;
+            top: 50%;
             left: 50%;
             font-size: 40rpx;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
         }
     }
-    .input_submit{
+
+    .input_submit {
         position: absolute;
         width: 31%;
         height: 80rpx;
         right: 0;
-        .sumbit{
+
+        .sumbit {
             position: absolute;
-            top:50%;
+            top: 50%;
             left: 50%;
             font-size: 40rpx;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
         }
     }
 
-}
+    .bottom_pic_place {
+        margin-top: 400rpx;
+        height: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+        white-space: nowrap;
+        margin-left: 10rpx;
+        .bottom_pic_add {
+            height: 100%;
+            width: 40%;
+            border: dashed rgb(255, 70, 70);
+            box-sizing: border-box;
+            margin-right: 50rpx;
+            display: inline-block;
+            position: relative;
 
+            .bottom_pic_add_ico {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: inline-block;
+                font-size: 50rpx;
+                color: rgb(255, 70, 70);
+            }
+        }
+
+        .bottom_img_place {
+            height: 100%;
+            display: inline-block;
+            margin-right: 50rpx;
+            position: relative; 
+
+            .bd {
+                position: absolute;
+                left: 92%;
+                top: 6%;
+                background-color: #fff;
+                height: 20rpx;
+                width: 20rpx;
+            }
+
+            .bottom_pic_del {
+                position: absolute;
+                left: 90%;
+                top: 2%;
+                color: red;
+                font-size: 45rpx;
+            }
+
+            .bottom_pic {
+                height: 100%;             
+            }
+            .bottom_pic_index{
+                position: absolute;
+                top: 90%;
+                left: 0;
+                background-color: #fff;
+                font-size: 32rpx;
+            }
+        }
+
+    }
+}

@@ -5,17 +5,12 @@
 </view>
 <!-- 内容 -->
 <view class="top1">
-    <view wx:if="{{userinfo}}" class="top_img_place">
-        <image mode="aspectFill" class="top_img_pic" src="{{userinfo.userInfo.avatarUrl}}"></image>
+    <view class="top_img_place">
+        <image mode="aspectFill" class="top_img_pic" src="{{userinfo.avatarUrl}}"></image>
         <view class="top_user_place">
-            <image class="top_user_icon" src="{{userinfo.userInfo.avatarUrl}}"></image>
-            <view class="top_user_name">{{userinfo.userInfo.nickName}}</view>
+            <image class="top_user_icon" src="{{userinfo.avatarUrl}}"></image>
+            <view class="top_user_name"><open-data type="userNickName" /></view>
         </view>
-    </view>
-    <view wx:else class="top_load">
-        <button class="top_load_btn" type="primary" open-type="getUserInfo" bindgetuserinfo="load">
-            登录
-        </button>
     </view>
 </view>
 <view class="myself_bottom">
@@ -35,6 +30,16 @@
                 <text class="identity_text iconfont .icon-zhangdan1"></text>
             </view>
             <text class="identity_text">账单查看</text>
+        </view>
+    </navigator>
+
+    <navigator url="">
+        <view class="identity">
+            <text></text>
+            <view class="identity_coin">
+                <text class="identity_text iconfont .icon-B"></text>
+            </view>
+            <text class="identity_text">通知</text>
         </view>
     </navigator>
 

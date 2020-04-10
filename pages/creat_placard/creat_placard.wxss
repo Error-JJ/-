@@ -34,7 +34,6 @@ page {
   height: 1060rpx;
   padding: 20rpx;
   box-sizing: border-box;
-  border: solid red;
 }
 .input .input_title {
   border-bottom: solid 1px #888888;
@@ -43,7 +42,6 @@ page {
 }
 .input .input_place {
   margin-top: 20rpx;
-  border: solid;
   left: 50%;
   height: 100%;
   transform: translate(-50%, 0%);
@@ -61,7 +59,6 @@ page {
   position: absolute;
   width: 33%;
   height: 80rpx;
-  border: solid;
 }
 .bottom .input_pic .pic {
   position: absolute;
@@ -95,4 +92,61 @@ page {
   left: 50%;
   font-size: 40rpx;
   transform: translate(-50%, -50%);
+}
+.bottom .bottom_pic_place {
+  margin-top: 400rpx;
+  height: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  margin-left: 10rpx;
+}
+.bottom .bottom_pic_place .bottom_pic_add {
+  height: 100%;
+  width: 40%;
+  border: dashed #ff4646;
+  box-sizing: border-box;
+  margin-right: 50rpx;
+  display: inline-block;
+  position: relative;
+}
+.bottom .bottom_pic_place .bottom_pic_add .bottom_pic_add_ico {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  font-size: 50rpx;
+  color: #ff4646;
+}
+.bottom .bottom_pic_place .bottom_img_place {
+  height: 100%;
+  display: inline-block;
+  margin-right: 50rpx;
+  position: relative;
+}
+.bottom .bottom_pic_place .bottom_img_place .bd {
+  position: absolute;
+  left: 92%;
+  top: 6%;
+  background-color: #fff;
+  height: 20rpx;
+  width: 20rpx;
+}
+.bottom .bottom_pic_place .bottom_img_place .bottom_pic_del {
+  position: absolute;
+  left: 90%;
+  top: 2%;
+  color: red;
+  font-size: 45rpx;
+}
+.bottom .bottom_pic_place .bottom_img_place .bottom_pic {
+  height: 100%;
+}
+.bottom .bottom_pic_place .bottom_img_place .bottom_pic_index {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  background-color: #fff;
+  font-size: 32rpx;
 }

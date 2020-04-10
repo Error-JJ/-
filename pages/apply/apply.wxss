@@ -1,0 +1,111 @@
+page {
+  background: linear-gradient(#ffffff, #ffb85c);
+}
+.top {
+  top: 0;
+  width: 100%;
+  height: 200rpx;
+  overflow: hidden;
+  position: fixed;
+  z-index: 1;
+}
+.top .top_img {
+  position: relative;
+  top: -180rpx;
+  width: 100%;
+  height: 1000rpx;
+}
+.top .title {
+  font-size: 20px;
+  color: white;
+  position: fixed;
+  left: 45%;
+  top: 4%;
+}
+.top .top_back {
+  position: fixed;
+  left: 3%;
+  top: 5%;
+  color: #fff;
+}
+.top .choose {
+  width: 100%;
+  height: 60rpx;
+  position: absolute;
+  bottom: 0;
+}
+.top .choose .choose_place {
+  width: 25%;
+  height: 100%;
+  text-align: center;
+  font-size: 34rpx;
+  box-sizing: border-box;
+  padding-bottom: 25rpx ;
+  display: inline-block;
+}
+.top .choose .true_choose {
+  color: #7a0000;
+  border-bottom: solid 8rpx #7a0000;
+}
+.top .choose .false_choose {
+  color: #dddddd;
+  border-bottom: solid 8rpx #dddddd;
+}
+.swiper {
+  height: 1330rpx;
+}
+.swiper .place {
+  width: 100%;
+  position: absolute;
+  margin-top: 200rpx;
+  height: 90%;
+}
+.swiper .place .repair_place {
+  border-bottom: solid 1px rgba(124, 124, 124, 0.801);
+  width: 90%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  padding-bottom: 50rpx;
+  padding-top: 20rpx;
+}
+.swiper .place .repair_place .repair_place2 {
+  border-radius: 1%;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  box-shadow: 5px 8px 7px 0px #92744d;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.swiper .place .repair_place .repair_place2 .repair_title {
+  border-bottom: solid 1px #252525;
+  font-weight: 600;
+  font-size: 40rpx;
+  padding-bottom: 10rpx ;
+}
+.swiper .place .repair_place .repair_place2 .repair_mes {
+  padding-top: 5px;
+  word-break: break-all;
+  word-wrap: break-word;
+  font-size: 34rpx;
+}
+.swiper .place .repair_place .repair_place2 .repair_date {
+  text-align: right;
+  font-size: 28rpx;
+}
+.placard_bottom {
+  width: 90rpx;
+  height: 90rpx;
+  background-color: rgba(0, 0, 0, 0.664);
+  position: fixed;
+  top: 87%;
+  right: 5%;
+  border-radius: 50%;
+  text-align: center;
+}
+.placard_bottom .bottom_icon {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  font-size: 45rpx;
+  transform: translate(-50%, -50%);
+}

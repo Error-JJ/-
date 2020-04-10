@@ -7,12 +7,12 @@ Page({
   data: {
     fourm:[],
     triggered: false,
+    scrolltop:0,
   },
   // 回到顶部
-  go_top: function () {
-    wx.pageScrollTo({
-      scrollTop: 0,
-      duration: 300
+  go_top: function (e) {
+    this.setData({
+      scrolltop: 0,
     })
   },
   // 滚动监听
@@ -164,10 +164,6 @@ Page({
   onShareAppMessage: function () {
 
   },
-  onPulling() {
-    console.log("下拉")
-  },
-
   onRefresh() {
     if (this._freshing) return
     this._freshing = true
@@ -217,13 +213,5 @@ Page({
       complete: ()=>{}
     });
     
-  },
-
-  onRestore() {
-    console.log("复位")
-  },
-
-  onAbort() {
-    console.log("终止")
   },
 })

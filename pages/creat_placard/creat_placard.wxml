@@ -4,18 +4,42 @@
     <text class="iconfont icon-fanhui top_back" bindtap="back"></text>
     <view class="title">发帖</view>
 </view>
+<!-- 输入 -->
 <view class="input">
+    <!-- 标题 -->
     <input class="input_title" placeholder="标题" type="text" focus="{{true}}" bindfocus="focus_title" bindinput="title_input" bindblur="repair1" value="{{title}}" />
-    <textarea class="input_place" fixed="{{true}}" placeholder="请输入内容" bindblur="repair2" cursor-spacing="100rpx" show-confirm-bar="{{false}}" bindfocus="focus_mes" value="{{mes}}" bindinput="mes_input" style="{{input_height}}"></textarea>
+    <!-- 内容 -->
+    <textarea class="input_place" adjust-position="{{false}}" placeholder="请输入内容" bindblur="repair2" cursor-spacing="100rpx" show-confirm-bar="{{false}}" bindfocus="focus_mes" value="{{mes}}" bindinput="mes_input" style="{{input_height}}"></textarea>
 </view>
+<!-- 底部 -->
 <view class="bottom " style="{{keyheight}}">
-    <view class="input_pic"  bindtap="go_pic">
+    <!-- 图片按钮 -->
+    <view class="input_pic" bindtap="go_pic">
         <text bindtap="go_pic" class="iconfont icon-zhaopian pic "></text>
     </view>
+    <!-- 相机按钮 -->
     <view class="input_camera">
         <text bindtap="go_camera" class="iconfont icon-xiangji camera"></text>
     </view>
+    <!-- 提交按钮 -->
     <view class="input_submit">
         <text bindtap="sumbita" class="sumbit iconfont icon-tijiao"></text>
     </view>
+    <!-- 图片展示栏 -->
+    <scroll-view scroll-x="{{true}}" scroll-left="" class="bottom_pic_place">
+        <!-- 图片输入 -->
+        <view class="bottom_pic_add" bindtap="pic_add" id="ss" >
+            <text class="bottom_pic_add_ico iconfont icon-hao"></text>
+        </view>
+        <!-- 图片区域 -->
+        <view wx:for="{{img}}" class="bottom_img_place">
+            <view class="bd"></view>
+            <!-- 删除按钮 -->
+            <text id="{{index}}" bindtap="img_del" class="bottom_pic_del iconfont icon-cha"></text>
+            <!-- 图片 -->
+            <image id="img{{index}}" mode="aspectFit" src="{{item}}"  class="bottom_pic" ></image>
+            <text class="bottom_pic_index">{{index+1}}/{{max_img+1}}</text>
+        </view>
+        
+    </scroll-view>
 </view>
