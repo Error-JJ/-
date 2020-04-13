@@ -1,0 +1,131 @@
+page {
+    background: linear-gradient(rgb(255, 248, 237), rgb(255, 210, 125));
+}
+
+.top {
+    width: 100%;
+    height: 130rpx;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+
+    .top_img {
+        position: relative;
+        top: -180rpx;
+        width: 100%;
+        height: 1000rpx;
+    }
+
+    .title {
+        font-size: 20px;
+        color: white;
+        position: fixed;
+        left: 45%;
+        top: 4%;
+    }
+
+    .top_back {
+        position: fixed;
+        left: 3%;
+        top: 5%;
+        color: #fff;
+    }
+}
+
+.input {
+    position: fixed;
+    margin-top: 171rpx;
+    width: 100%;
+    height: 650rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+    padding-left:30rpx ;
+    border-bottom: solid 1px #b2b2b2;
+    border-top: solid 1px #b2b2b2;
+    .input_one{
+        margin-top:18rpx ;
+        border-bottom: solid 1px #b2b2b2;
+        width:100%;
+        box-sizing: border-box;
+        padding-bottom:18rpx;
+        
+        .input_text{
+            display: inline-block;
+            width: 170rpx;
+            vertical-align: middle;
+            font-size: 36rpx;
+            letter-spacing: 4rpx;
+        }
+        .input_title {
+            margin-left: 10rpx;
+            width: 500rpx;        
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 30rpx;
+        }
+    }
+    
+
+    .input_place {
+        border: solid 1px #b2b2b2;
+        box-sizing: border-box;
+        margin-top: 30rpx;
+        height: 200rpx;
+        width: 100%;
+        padding: 10rpx;
+        font-size: 30rpx;
+    }
+    .pic_place{
+        margin-top: 30rpx;
+        margin-right: 50rpx;
+        height: 170rpx;
+        width: 170rpx;
+        border: dashed 2px #b2b2b2;
+        display: inline-block;
+        position: relative;
+        .pic_add{
+            position: absolute;
+            font-size: 50rpx ;
+            color: #888888;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+        .pic{
+            height: 170rpx;
+            width: 170rpx;
+            z-index: 1;
+        }
+    }
+}
+.input_btn {
+    position: relative;
+    top: 900rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    transition: .1s;
+    font-weight: 500;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    padding: 12px 20px;
+    font-size: 34rpx;
+    border-radius: 4px;
+    color: #fff;
+    background-color: rgb(255, 70, 70);
+    border-color: rgb(255, 70, 70);
+    height: 80rpx;
+    width:625rpx ;
+}

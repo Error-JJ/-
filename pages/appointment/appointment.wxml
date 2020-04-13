@@ -1,0 +1,85 @@
+<!-- 顶部导航栏 -->
+<view class="top">
+    <image src="../../pic/22.jpg" class="top_img"/>
+    <text class="iconfont icon-fanhui top_back" bindtap="back"></text>
+    <view class="title">预约</view>
+    <view class="choose" >
+        <view bindtap="find_all" class="choose_place {{choose1?'true_choose':'false_choose'}}">
+            <text>全部</text>
+        </view>
+        <view bindtap="find_wait" class="choose_place {{choose2?'true_choose':'false_choose'}}">
+            <text>采购中</text>
+        </view>
+        <view bindtap="find_complete" class="choose_place {{choose3?'true_choose':'false_choose'}}">
+            <text>已完成</text>
+        </view>
+    </view>
+</view>
+
+<swiper class="swiper" current="{{choose_index}}" bindchange="change">
+    <swiper-item >
+<!-- 全部 -->
+<scroll-view scroll-y="{{true}}" scroll-x="{{true}}" class="place">
+<view class="repair_place" wx:for="{{mes0}}">
+    <view class="repair_place2" >
+        <view class="repair_title">
+            <text style="color:{{item.title=='采购中'?'red':'green'}}">{{item.title}}</text>
+        </view>
+        <view class="repair_mes">
+            <text >{{item.mes}}</text>
+        </view>
+        <view class="repair_date">
+            <text>{{item.date}}</text>
+        </view>
+    </view>  
+</view>
+</scroll-view>
+</swiper-item>
+    <swiper-item >
+<!-- 采购中 -->
+<scroll-view scroll-y="{{true}}" scroll-x="{{true}}" class="place">
+<view class="repair_place">
+    <view class="repair_place2" wx:for="{{mes2}}">
+        <view class="repair_title">
+            <text style="color:{{item.title=='采购中'?'red':'green'}}">{{item.title}}</text>
+        </view>
+        <view class="repair_mes">
+            <text >{{item.mes}}</text>
+        </view>
+        <view class="repair_date">
+            <text>{{item.date}}</text>
+        </view>
+    </view>  
+</view>
+</scroll-view>
+</swiper-item>
+
+    <swiper-item >
+<!-- 已完成 -->
+<scroll-view scroll-y="{{true}}" scroll-x="{{true}}" class="place">
+<view class="repair_place">
+    <view class="repair_place2" wx:for="{{mes3}}">
+        <view class="repair_title">
+            <text style="color:{{item.title=='采购中'?'red':'green'}}">{{item.title}}</text>
+        </view>
+        <view class="repair_mes">
+            <text >{{item.mes}}</text>
+        </view>
+        <view class="repair_date">
+            <text>{{item.date}}</text>
+        </view>
+    </view>  
+</view>
+</scroll-view>
+</swiper-item>
+
+
+</swiper>
+ 
+<!-- 填写报修 -->
+<navigator url="../create_appointment/create_appointment">
+    <view class="placard_bottom">
+        <text class="iconfont icon-icon bottom_icon"></text>
+    </view>
+</navigator>
+

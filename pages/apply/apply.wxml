@@ -1,109 +1,49 @@
 <!-- 顶部导航栏 -->
 <view class="top">
-    <image src="../../pic/22.jpg" class="top_img" catchtap='navmap' />
+    <image src="../../pic/22.jpg" class="top_img" />
     <text class="iconfont icon-fanhui top_back" bindtap="back"></text>
-    <view class="title">报修</view>
-    <view class="choose" >
-        <view bindtap="find_all" class="choose_place {{choose1?'true_choose':'false_choose'}}">
-            <text>全部</text>
-        </view>
-        <view bindtap="find_wait" class="choose_place {{choose2?'true_choose':'false_choose'}}">
-            <text>待处理</text>
-        </view>
-        <view bindtap="find_doing" class="choose_place {{choose3?'true_choose':'false_choose'}}">
-            <text>抢救中</text>
-        </view>
-        <view bindtap="find_complete" class="choose_place {{choose4?'true_choose':'false_choose'}}">
-            <text>已完成</text>
-        </view>
+    <view class="title">申报</view>
+</view>
+<view class="middle">
+    <textarea wx:if="{{state_num==0}}" placeholder="请填写申报内容" bindinput="input" maxlength="140" show-confirm-bar="{{false}}" cursor-spacing="160" class="middle_input"></textarea>
+    <view wx:if="{{state_num==0}}" class="input_btn" bindtap="sumbit">提交</view>
+    <view wx:if="{{state_num==2}}" class="input_btn" catchtap="sumbit2">申请验收</view>
+</view>
+<view class="right">
+    <view class="text_place" >
+        <text class="text">请提交申报内容并前往物业交押金</text>
+    </view>
+    <view class="text_place"  wx:if="{{state_num>0}}">
+        <text class="text">等待装修公司材料并审核</text>
+    </view>
+    <view class="text_place"  wx:if="{{state_num>1}}">
+        <text class="text">装修中</text>
+    </view>
+    <view class="text_place"  wx:if="{{state_num>2}}">
+        <text class="text">等待验收中</text>
+    </view>
+    <view class="text_place"  wx:if="{{state_num>3}}">
+        <text class="text">2020-6-1后取回押金</text>
     </view>
 </view>
-
-<swiper class="swiper" current="{{choose_index}}" bindchange="change">
-    <swiper-item >
-<!-- 全部 -->
-<scroll-view scroll-y="{{true}}" scroll-x="{{true}}" class="place">
-<view class="repair_place" wx:for="{{mes0}}">
-    <view class="repair_place2" >
-        <view class="repair_title">
-            <text >{{item.title}}</text>
-        </view>
-        <view class="repair_mes">
-            <text >{{item.mes}}</text>
-        </view>
-        <view class="repair_date">
-            <text>{{item.date}}</text>
-        </view>
-    </view>  
-</view>
-</scroll-view>
-</swiper-item>
-
-    <swiper-item >
-<!-- 待处理 -->
-<scroll-view scroll-y="{{true}}" scroll-x="{{true}}" class="place">
-<view class="repair_place">
-    <view class="repair_place2" wx:for="{{mes1}}">
-        <view class="repair_title">
-            <text >{{item.title}}</text>
-        </view>
-        <view class="repair_mes">
-            <text >{{item.mes}}</text>
-        </view>
-        <view class="repair_date">
-            <text>{{item.date}}</text>
-        </view>
-    </view>  
-</view>
-</scroll-view>
-</swiper-item>
-
-    <swiper-item >
-<!-- 抢救中 -->
-<scroll-view scroll-y="{{true}}" scroll-x="{{true}}" class="place">
-<view class="repair_place">
-    <view class="repair_place2" wx:for="{{mes2}}">
-        <view class="repair_title">
-            <text >{{item.title}}</text>
-        </view>
-        <view class="repair_mes">
-            <text >{{item.mes}}</text>
-        </view>
-        <view class="repair_date">
-            <text>{{item.date}}</text>
-        </view>
-    </view>  
-</view>
-</scroll-view>
-</swiper-item>
-
-    <swiper-item >
-<!-- 已完成 -->
-<scroll-view scroll-y="{{true}}" scroll-x="{{true}}" class="place">
-<view class="repair_place">
-    <view class="repair_place2" wx:for="{{mes3}}">
-        <view class="repair_title">
-            <text >{{item.title}}</text>
-        </view>
-        <view class="repair_mes">
-            <text >{{item.mes}}</text>
-        </view>
-        <view class="repair_date">
-            <text>{{item.date}}</text>
-        </view>
-    </view>  
-</view>
-</scroll-view>
-</swiper-item>
-
-
-</swiper>
-
-<!-- 填写报修 -->
-<navigator url="../creat_placard/creat_placard">
-    <view class="placard_bottom">
-        <text class="iconfont icon-icon bottom_icon"></text>
+<view class="left">
+    <view class="left1">
+        <view class="circle {{state_num==0?'suer':''}}"></view>
+        <view class="line" wx:if="{{state_num>0}}"></view>
     </view>
-</navigator>
-
-
+    <view class="left1" wx:if="{{state_num>0}}">
+        <view class="circle {{state_num==1?'suer':''}}"></view>
+        <view class="line" wx:if="{{state_num>1}}"></view>
+    </view>
+    <view class="left1" wx:if="{{state_num>1}}">
+        <view class="circle {{state_num==2?'suer':''}}"></view>
+        <view class="line" wx:if="{{state_num>2}}"></view>
+    </view>
+    <view class="left1" wx:if="{{state_num>2}}">
+        <view class="circle {{state_num==3?'suer':''}}"></view>
+        <view class="line" wx:if="{{state_num>3}}"></view>
+    </view>
+    <view class="left1" wx:if="{{state_num>3}}">
+        <view class="circle {{state_num==4?'suer':''}}"></view>
+    </view>
+</view>

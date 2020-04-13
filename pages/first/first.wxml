@@ -1,2 +1,48 @@
-<!--pages/first/first.wxml-->
-<text>pages/first/first.wxml</text>
+<!-- 顶部导航栏 -->
+<view class="top">
+    <image src="../../pic/22.jpg" class="top_img"/>
+    <view class="title">首页</view>
+</view>
+<view class="play_palce">
+    <swiper class="play" indicator-dots="{{true}}" indicator-color="rgba(0, 0, 0, .3)" indicator-active-color="rgb(255, 70, 70)" autoplay="{{true}}"
+    interval="5000" duration="500" circular="{{true}}">
+        <swiper-item >
+            <view class="paly_img">
+                <image class="img" mode="aspectFill" src="../../pic/l1.jpg" />
+            </view>
+        </swiper-item>
+        <swiper-item >
+        <view class="paly_img">
+            <image class="img" mode="aspectFill" src="../../pic/l2.jpg" />
+        </view>
+        </swiper-item>
+        <swiper-item >
+        <view class="paly_img">
+            <image class="img" mode="aspectFill" src="../../pic/l3.jpg" />
+        </view>
+        </swiper-item>
+    </swiper>
+</view>
+<view class="function_place">
+    <navigator url="../announcement/announcement" class="function">   
+        <view class="iconfont icon-gonggao function_icon"></view>
+        <text class="function_text">公告</text>
+     </navigator>
+
+   
+    <navigator class="function">
+        <view class="iconfont icon-daqia function_icon "></view>
+        <text class="function_text">打卡</text>
+    </navigator>
+
+
+    <navigator url="../appointment/appointment" class="function">
+        <view class="iconfont icon-_yuyue function_icon "></view>
+        <text class="function_text">预约</text>
+    </navigator>
+
+</view>
+<view class="bottom">
+    <view class="bottom_title">通知</view>
+    <view class="bottom_mes" wx:for="{{mes}}">{{item.title}}</view>
+</view>

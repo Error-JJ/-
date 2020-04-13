@@ -1,13 +1,14 @@
-page{
-    background: linear-gradient(rgb(255, 255, 255), #ffb85c);
+page {
+    background: linear-gradient(rgb(255, 248, 237), rgb(255, 210, 125));
 }
+
 .top {
-    top: 0;
     width: 100%;
-    height: 200rpx;
+    height: 130rpx;
     overflow: hidden;
     position: fixed;
     z-index: 1;
+
     .top_img {
         position: relative;
         top: -180rpx;
@@ -29,89 +30,104 @@ page{
         top: 5%;
         color: #fff;
     }
-    .choose{
-        width: 100%;
-        height: 60rpx;
-        position: absolute;
-        bottom: 0;
-        .choose_place{
-            width: 25%;
-            height: 100%;
-            text-align: center;
-            font-size: 34rpx;
-            box-sizing: border-box;
-            padding-bottom:25rpx ;
-            display: inline-block;
-        }
-        .true_choose{
-            color: rgb(122, 0, 0);
-            border-bottom: solid 8rpx rgb(122, 0, 0);
-        }
-        .false_choose{
-            color: #dddddd;
-            border-bottom: solid 8rpx #dddddd;
-        }
-    }
 }
-.swiper{
-    height: 1330rpx;
-.place{
-    width: 100%;
-    position: absolute;
-    margin-top: 200rpx;
-    height: 90%;
-    .repair_place{
-    border-bottom:solid 1px rgba(124, 124, 124, 0.801) ;
-    width: 90%;
-    position: relative; 
-    left: 50%;
-    transform: translate(-50%);
-    padding-bottom: 50rpx;
-    padding-top: 20rpx;
-    .repair_place2{
-        border-radius: 1%;
-        border: 1px solid rgb(255, 255, 255);
-        padding: 10px;
-        box-shadow:5px 8px 7px 0px rgb(146, 116, 77);
-        background-color: rgba(255, 255, 255, 0.5);
-        .repair_title{
-            border-bottom: solid 1px rgb(37, 37, 37);
-            font-weight: 600;
-            font-size: 40rpx;
-            padding-bottom:10rpx ;
-        }
-        .repair_mes{
-            padding-top: 5px;
-            word-break: break-all;
-            word-wrap: break-word;
-            font-size: 34rpx;
-        }
-        .repair_date{
-            text-align: right;
-            font-size: 28rpx;
-        }
-    }
-}
-}
-}
-
-
-
-.placard_bottom {
-    width: 90rpx;
-    height: 90rpx;
-    background-color: rgba(0, 0, 0, 0.664);
+.middle{
     position: fixed;
-    top: 87%;
-    right: 5%;
-    border-radius: 50%;
-    text-align: center;
-
-    .bottom_icon {
-        color: #fff;
+    top: 450rpx;
+    width: 100%;
+    height: 300rpx;
+    z-index: 2;
+    .middle_input{
+        padding: 10rpx;
         position: absolute;
-        top: 50%;
-        font-size: 45rpx;
-        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 200rpx;
+        left: 50%;
+        transform: translateX(-50%);
+        box-sizing: border-box;
+        border-top: solid 1px #888888;
+        border-bottom: solid 1px #888888;
+        background-color: #fff;
     }
+    .input_btn {
+        position: relative;
+        top: 230rpx;
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-block;
+        line-height: 1;
+        white-space: nowrap;
+        cursor: pointer;
+        background: #fff;
+        border: 1px solid #dcdfe6;
+        color: #606266;
+        -webkit-appearance: none;
+        text-align: center;
+        box-sizing: border-box;
+        outline: none;
+        margin: 0;
+        transition: .1s;
+        font-weight: 500;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        padding: 12px 20px;
+        font-size: 34rpx;
+        border-radius: 4px;
+        color: #fff;
+        background-color: rgb(255, 70, 70);
+        border-color: rgb(255, 70, 70);
+        height: 80rpx;
+        width:625rpx ;
+    }
+}
+.right{
+    top: 150rpx;
+    height: 830rpx;
+    width: 600rpx;
+    left: 110rpx;
+    position: fixed;
+    .text_place{
+        width: 100%;
+        height: 150rpx;
+        box-sizing: border-box;
+        margin-bottom: 20rpx;
+        .text{
+            position: relative;
+            top: 30%;
+        }
+    }
+}
+.left{
+    top: 200rpx;
+    height: 750rpx;
+    width: 100rpx;
+    position: fixed;
+    .left1{
+        width: 100%;
+        height: 170rpx;
+        .circle{
+            position: absolute;
+            width: 40rpx;
+            height: 40rpx;
+            background-color: #888888;
+            border-radius: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        .line{
+            position: relative;
+                width: 5rpx;
+                height: 130rpx;
+                background-color: #888888;
+                left: 50%;
+                top:40rpx;
+                transform: translateX(-50%);
+        }
+        .suer{
+            background-color: rgb(255, 70, 70);
+        }
+    }
+    
 }

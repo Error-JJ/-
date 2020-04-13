@@ -1,11 +1,11 @@
 <!-- 顶部导航栏 -->
 <view class="top">
-    <image src="../../pic/22.jpg" class="top_img" catchtap='navmap' />
+    <image src="../../pic/22.jpg" class="top_img"/>
     <text class="iconfont icon-fanhui top_back" bindtap="back"></text>
     <view class="title">详情</view>
 </view>
 <!-- 内容 -->
-<view class="placard">
+<scroll-view scroll-y="{{true}}" class="placard" refresher-enabled="{{true}}" refresher-threshold="{{50}}" refresher-default-style="black"  refresher-triggered="{{triggered}}"  bindrefresherrefresh="onRefresh" scroll-with-animation="{{true}}">
     <!-- 标题 -->
     <view class="placard_title_place">
         <text class="placard_title">{{ title }}</text>
@@ -21,11 +21,16 @@
             <text class="placard_num">{{ index+1 }}楼</text>
         </view>
         <view class="placard_message_place">
-            <text class="placard_message">{{ item.placard_message }}</text>
+            <rich-text nodes="{{ item.placard_message }}" class="placard_message"></rich-text>
         </view>
     </view>
+</scroll-view>
+<!-- 回到顶部 -->
+<view class="go_top" bindtap="go_top" >
+    <text class="iconfont icon-top to_top_icon"></text>
 </view>
-<navigator src="">
+<!-- 发帖 -->
+<navigator url="../push_placard/push_placard?fourm_id={{fourm_id}}">
     <view class="placard_bottom">
         <text class="iconfont icon-icon bottom_icon"></text>
     </view>

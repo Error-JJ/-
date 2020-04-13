@@ -1,10 +1,9 @@
 page {
-  background: linear-gradient(#ffffff, #ffb85c);
+  background: linear-gradient(#fff8ed, #ffd27d);
 }
 .top {
-  top: 0;
   width: 100%;
-  height: 200rpx;
+  height: 130rpx;
   overflow: hidden;
   position: fixed;
   z-index: 1;
@@ -28,84 +27,102 @@ page {
   top: 5%;
   color: #fff;
 }
-.top .choose {
-  width: 100%;
-  height: 60rpx;
-  position: absolute;
-  bottom: 0;
-}
-.top .choose .choose_place {
-  width: 25%;
-  height: 100%;
-  text-align: center;
-  font-size: 34rpx;
-  box-sizing: border-box;
-  padding-bottom: 25rpx ;
-  display: inline-block;
-}
-.top .choose .true_choose {
-  color: #7a0000;
-  border-bottom: solid 8rpx #7a0000;
-}
-.top .choose .false_choose {
-  color: #dddddd;
-  border-bottom: solid 8rpx #dddddd;
-}
-.swiper {
-  height: 1330rpx;
-}
-.swiper .place {
-  width: 100%;
-  position: absolute;
-  margin-top: 200rpx;
-  height: 90%;
-}
-.swiper .place .repair_place {
-  border-bottom: solid 1px rgba(124, 124, 124, 0.801);
-  width: 90%;
-  position: relative;
-  left: 50%;
-  transform: translate(-50%);
-  padding-bottom: 50rpx;
-  padding-top: 20rpx;
-}
-.swiper .place .repair_place .repair_place2 {
-  border-radius: 1%;
-  border: 1px solid #ffffff;
-  padding: 10px;
-  box-shadow: 5px 8px 7px 0px #92744d;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-.swiper .place .repair_place .repair_place2 .repair_title {
-  border-bottom: solid 1px #252525;
-  font-weight: 600;
-  font-size: 40rpx;
-  padding-bottom: 10rpx ;
-}
-.swiper .place .repair_place .repair_place2 .repair_mes {
-  padding-top: 5px;
-  word-break: break-all;
-  word-wrap: break-word;
-  font-size: 34rpx;
-}
-.swiper .place .repair_place .repair_place2 .repair_date {
-  text-align: right;
-  font-size: 28rpx;
-}
-.placard_bottom {
-  width: 90rpx;
-  height: 90rpx;
-  background-color: rgba(0, 0, 0, 0.664);
+.middle {
   position: fixed;
-  top: 87%;
-  right: 5%;
-  border-radius: 50%;
-  text-align: center;
+  top: 450rpx;
+  width: 100%;
+  height: 300rpx;
+  z-index: 2;
 }
-.placard_bottom .bottom_icon {
-  color: #fff;
+.middle .middle_input {
+  padding: 10rpx;
   position: absolute;
-  top: 50%;
-  font-size: 45rpx;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 200rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  border-top: solid 1px #888888;
+  border-bottom: solid 1px #888888;
+  background-color: #fff;
+}
+.middle .input_btn {
+  position: relative;
+  top: 230rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: 0.1s;
+  font-weight: 500;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  padding: 12px 20px;
+  font-size: 34rpx;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #ff4646;
+  border-color: #ff4646;
+  height: 80rpx;
+  width: 625rpx ;
+}
+.right {
+  top: 150rpx;
+  height: 830rpx;
+  width: 600rpx;
+  left: 110rpx;
+  position: fixed;
+}
+.right .text_place {
+  width: 100%;
+  height: 150rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+.right .text_place .text {
+  position: relative;
+  top: 30%;
+}
+.left {
+  top: 200rpx;
+  height: 750rpx;
+  width: 100rpx;
+  position: fixed;
+}
+.left .left1 {
+  width: 100%;
+  height: 170rpx;
+}
+.left .left1 .circle {
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  background-color: #888888;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.left .left1 .line {
+  position: relative;
+  width: 5rpx;
+  height: 130rpx;
+  background-color: #888888;
+  left: 50%;
+  top: 40rpx;
+  transform: translateX(-50%);
+}
+.left .left1 .suer {
+  background-color: #ff4646;
 }

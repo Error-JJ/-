@@ -31,7 +31,7 @@ page {
   position: fixed;
   margin-top: 131rpx;
   width: 100%;
-  height: 1060rpx;
+  height: 1120rpx;
   padding: 20rpx;
   box-sizing: border-box;
 }

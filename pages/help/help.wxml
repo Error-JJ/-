@@ -5,7 +5,7 @@
 <view class="bg4"></view>
 <!-- 顶部导航栏 -->
 <view class="top">
-    <image src="../../pic/22.jpg" class="top_img" catchtap='navmap' />
+    <image src="../../pic/22.jpg" class="top_img"/>
     <view class="title">服务</view>
     <view class="top_text">
         <text class="iconfont icon-nvhai top_icon"></text>
@@ -41,7 +41,7 @@
 </view>
 </navigator>
 <!-- 帮助图标 -->
-<navigator url="">
+<navigator url="../request/request">
 <view class="service_place coor3">
     
         <view class="mes_pic_place q3">

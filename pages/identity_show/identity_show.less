@@ -1,0 +1,109 @@
+page {
+    background: linear-gradient(rgb(255, 248, 237), rgb(255, 210, 125));
+}
+.top {
+    width: 100%;
+    height: 130rpx;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+
+    .top_img {
+        position: relative;
+        top: -180rpx;
+        width: 100%;
+        height: 1000rpx;
+    }
+
+    .title {
+        font-size: 20px;
+        color: white;
+        position: fixed;
+        left: 39.5%;
+        top: 4%;
+    }
+
+    .top_back {
+        position: fixed;
+        left: 3%;
+        top: 5%;
+        color: #fff;
+    }
+}
+
+.placard { 
+    position: absolute;
+    top: 131rpx;
+    width: 100%;
+    height: 1200rpx;
+    .placard_one {
+        width: 85%;
+        left: 50%;
+        position: relative;
+        margin-top: 30rpx;
+        transform: translate(-50%,0);
+        background-color: rgba(255, 255, 255, 0.733);
+        padding: 35rpx;
+        border: none 1rpx #ebebeb;
+        border-radius: 2%;
+        box-shadow: 5px 5px 10px -7px rgb(150, 150, 150);
+        margin-bottom: 25rpx;
+        .user_place {
+            width: 100%;
+            height: 60rpx;
+
+            .placard_icon_place {
+                width: 80rpx;
+                height: 80rpx;
+                display: inline-block;
+                vertical-align: middle;
+                border-radius: 10%;
+                overflow: hidden;
+                position: relative;
+                top:50%;
+                transform: translateY(-50%);
+                .placard_icon {
+                    position: absolute;
+                    top:50%;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                   font-size: 70rpx;
+                   color: rgb(252, 148, 29);
+                }
+            }
+
+            .placard_name {
+                margin-left: 20rpx;
+                font-size: 34rpx;
+                font-weight: 600;
+            }
+            .placard_state {
+                position: absolute;
+                right: 0;
+                top:50% ;
+                transform: translateY(-50%);
+                margin-right: 40rpx;
+                font-size: 30rpx;
+            }
+        }
+    }
+    .identity_add{
+        width: 85%;
+        left: 50%;
+        position: relative;
+        margin-top: 30rpx;
+        transform: translate(-50%,0);
+        background-color: rgba(255, 255, 255, 0.733);
+        padding: 35rpx;
+        border: dashed 8rpx #b2b2b2;
+        border-radius: 2%;
+        box-shadow: 5px 5px 10px -7px rgb(150, 150, 150);
+        margin-bottom: 25rpx;
+        text-align: center;
+        .add_icon{
+            font-size: 50rpx;
+            color: #b2b2b2;
+            font-weight: 600;
+        }
+        }
+}

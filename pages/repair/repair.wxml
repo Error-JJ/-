@@ -1,6 +1,6 @@
 <!-- 顶部导航栏 -->
 <view class="top">
-    <image src="../../pic/22.jpg" class="top_img" catchtap='navmap' />
+    <image src="../../pic/22.jpg" class="top_img"/>
     <text class="iconfont icon-fanhui top_back" bindtap="back"></text>
     <view class="title">报修</view>
     <view class="choose" >
@@ -98,9 +98,9 @@
 
 
 </swiper>
-
+ 
 <!-- 填写报修 -->
-<navigator url="../creat_placard/creat_placard">
+<navigator url="../creat_repair/breat_repair">
     <view class="placard_bottom">
         <text class="iconfont icon-icon bottom_icon"></text>
     </view>

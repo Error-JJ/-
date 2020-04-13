@@ -1,6 +1,6 @@
 <!-- 顶部导航栏 -->
 <view class="top">
-    <image src="../../pic/22.jpg" class="top_img" catchtap='navmap' />
+    <image src="../../pic/22.jpg" class="top_img"  />
     <text class="iconfont icon-fanhui top_back" bindtap="back"></text>
     <view class="title">投诉</view>
 </view>

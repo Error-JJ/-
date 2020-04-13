@@ -1,20 +1,20 @@
 <!-- 顶部导航栏 -->
 <view class="top">
-    <image src="../../pic/22.jpg" class="top_img" catchtap='navmap' />
-    <view class="title">社区</view>
+    <image src="../../pic/22.jpg" class="top_img"/>
+    <view class="title">我的</view>
 </view>
 <!-- 内容 -->
 <view class="top1">
     <view class="top_img_place">
-        <image mode="aspectFill" class="top_img_pic" src="{{userinfo.avatarUrl}}"></image>
+        <view class="top_img_pic"><open-data type="userAvatarUrl"></open-data></view>
         <view class="top_user_place">
-            <image class="top_user_icon" src="{{userinfo.avatarUrl}}"></image>
+            <view class="top_user_icon"><open-data  type="userAvatarUrl"></open-data></view>
             <view class="top_user_name"><open-data type="userNickName" /></view>
         </view>
     </view>
 </view>
 <view class="myself_bottom">
-    <navigator url="../identity/identity">
+    <navigator url="../identity_show/identity_show">
         <view class="identity">
             <view class="identity_coin">
                 <text class="identity_text iconfont icon-credentials_icon"></text>
@@ -33,7 +33,7 @@
         </view>
     </navigator>
 
-    <navigator url="">
+    <navigator url="../notice/notice">
         <view class="identity">
             <text></text>
             <view class="identity_coin">

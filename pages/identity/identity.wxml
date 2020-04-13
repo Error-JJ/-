@@ -1,19 +1,44 @@
-<form >
-<view class="input_place">
+<!-- 顶部 -->
+<view class="top" >
+    <image src="../../pic/22.jpg" class="top_img" />
+    <text class="iconfont icon-fanhui top_back" bindtap="back"></text>
+    <view class="title">身份验证</view>
+</view>
+<!-- 输入 -->
+<view class="input_place" >
     <view class="name">
         <text class="iconfont icon-wode name-icon"></text>
-        <input class="name_input" placeholder="姓名"></input>
+        <input class="name_input" placeholder="姓名" bindinput="nameChange"></input>
     </view>
     <view class="id">
         <text class="iconfont icon-credentials_icon id-icon"></text>
-        <input class="id_input" placeholder="身份证号码"></input>
+        <input class="id_input" placeholder="身份证号码" bindinput="idChange"></input>
     </view>
-    <view class="room">
+    <view class="phone">
+        <text class="iconfont icon-shouji phone-icon"></text>
+        <input class="phone_input" placeholder="手机号码" value="{{phone}}" bindinput="phoneChange"></input>
+    </view>
+    <view class="room" catchtap="show">
         <text class="iconfont icon-gwxxzhusuodizhi room-icon"></text>
-        <input class="room_input" placeholder="门牌号"></input>
+        <text class="room_input" style="{{adress=='门牌号'?'color:#888888':''}}">{{adress}}</text>
     </view>
 </view>
-<button class=".identity_btn" type="submit" size="{{defaultSize}}" loading="{{loading}}" plain="{{plain}}"
-        disabled="{{disabled}}" bindtap="default" hover-class="other-button-hover"> 
-        提交 </button>
-</form>
+<!-- 提交 -->
+<view type="warn" class="input_btn" bindtap="sumbit">提交</view>
+<!-- 黑幕 -->
+<view class="black" wx:if="{{!close}}"></view>
+<view class="ch" style="transition:0.3s;{{close?'height:0px':''}}">
+    <text class="cel" catchtap="close">取消</text>
+    <text class="sure" catchtap="sure_tem">确定</text>
+    <picker-view indicator-style="height: 50px;" style="width: 70%; height: 200px;margin-left:50%;transform: translateX(-50%);" value="{{value}}" bindchange="bindChange">
+        <picker-view-column>
+            <view wx:for="{{house}}" class="room_ch">{{item}}栋</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view wx:for="{{home_height}}" class="room_ch">{{item}}层</view>
+        </picker-view-column>
+        <picker-view-column>
+            <view wx:for="{{home_num}}" class="room_ch">{{item}}房</view>
+        </picker-view-column>
+    </picker-view>
+</view>

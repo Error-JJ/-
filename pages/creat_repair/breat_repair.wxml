@@ -1,0 +1,36 @@
+<!-- 顶部导航栏 -->
+<view class="top">
+    <image src="../../pic/22.jpg" class="top_img"/>
+    <text class="iconfont icon-fanhui top_back" bindtap="back"></text>
+    <view class="title">报修</view>
+</view>
+<!-- 输入 -->
+<view class="input">
+    <!-- 设备名称 -->
+    <view class="input_one">
+        <text class="input_text">设备</text>
+        <input class="input_title" placeholder="请输入故障的设备" adjust-position="{{false}}" bindinput="title_input" value="{{goods}}"  />
+    </view>
+    <!-- 设备地点 -->
+     <view class="input_one">
+        <text class="input_text">地点</text>
+        <input class="input_title" placeholder="请输入设备的地点" adjust-position="{{false}}" bindinput="place_input" value="{{place}}"  />
+    </view>  
+    <!-- 详细描述 -->
+    <textarea class="input_place" maxlength="140" adjust-position="{{false}}" placeholder="故障详细描述" cursor-spacing="100rpx" show-confirm-bar="{{false}}" value="{{mes}}" bindinput="mes_input" ></textarea>
+    <!-- 照片 -->
+    <view class="pic_place" id="0" bindtap="pic_add">
+        <text class="pic_add iconfont icon-hao" hidden="{{img[0].show}}"></text>
+        <image src="{{img[0].src}}" class="pic" />
+    </view>
+    <view class="pic_place" id="1" bindtap="pic_add">
+        <text class="pic_add iconfont icon-hao" hidden="{{img[1].show}}"></text>
+        <image class="pic" src="{{img[1].src}}" class="pic" />
+    </view>
+    <view class="pic_place" id="2" bindtap="pic_add">
+        <text class="pic_add iconfont icon-hao" hidden="{{img[2].show}}"></text>
+        <image src="{{img[2].src}}" class="pic" />
+    </view>
+</view>
+<!-- 提交 -->
+<view class="input_btn" bindtap="sumbit">提交</view>

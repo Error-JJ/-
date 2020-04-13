@@ -1,9 +1,4 @@
-// pages/creat_placard/creat_placard.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     mes: "",
     title: "",
@@ -14,9 +9,9 @@ Page({
     keyheight_value: 0,
     pic_open: false,
     time: false,
-    img:[],
-    max_img:4,
-    now_img:0,
+    img: [],
+    max_img: 4,
+    now_img: 0,
   },
   //回到上一个页面
   back: function () {
@@ -37,7 +32,7 @@ Page({
       input1: true,
       pic_open: false,
     })
-    
+
   },
 
   //聚焦内容
@@ -56,22 +51,20 @@ Page({
   //标题失焦
   repair1: function () {
     var that = this;
-    setTimeout(function () {
-
+    that.setData({
+      input1: false,
+    })
+    if (that.data.pic_open == false && that.data.input1 == false && that.data.input2 == false) {
       that.setData({
-        input1: false,
+        keyheight: "",
+        input_height: ""
       })
-      if (that.data.pic_open == false && that.data.input1 == false && that.data.input2 == false) {
-        that.setData({
-          keyheight: "",
-          input_height: ""
-        })
-      } else {
-        that.setData({
-          pic_open: false,
-        })
-      }
-    }, 80)
+    } else {
+      that.setData({
+        pic_open: false,
+      })
+    }
+
   },
 
   //内容失焦
@@ -92,53 +85,49 @@ Page({
     }
   },
   //上传照片
-  pic_add:function(){ 
-    //超过单次贴图片张数
-    if(this.data.now_img>this.data.max_img)
-    {
+  pic_add: function () {
+    //超过上传图片张数
+    if (this.data.now_img > this.data.max_img) {
       wx.showToast({
-        title: '已经超过可上次图片张数',
+        title: '已达上传上限',
         icon: 'none',
-        image: '',
         duration: 1500,
         mask: false,
-        success: (result)=>{
-          
-        },
-        fail: ()=>{},
-        complete: ()=>{}
       });
     }
-    else{
-    wx.chooseImage({
-      count: 5,
-      sizeType: ['original','compressed'],
-      sourceType: ['album'],
-      success: (result)=>{     
-        //单次上传超过可上传张数  
-        if(result.tempFilePaths.length+this.data.now_img>this.data.max_img){
-          var n=this.data.max_img-this.data.now_img;
-          var m=result.tempFilePaths.length-n;
-          result.tempFilePaths.splice(n+1,m)
-        }       
-        this.setData({
-          img:this.data.img.concat(result.tempFilePaths),
-          now_img:this.data.now_img+result.tempFilePaths.length,
-        })
-      },
-      fail: ()=>{},
-      complete: ()=>{},
-    });
+    //上传
+    else {
+      wx.chooseImage({
+        count: 5,
+        sizeType: ['original', 'compressed'],
+        sourceType: ['album'],
+        success: (result) => {
+          //单次上传超过可上传张数  
+          if (result.tempFilePaths.length + this.data.now_img > this.data.max_img) {
+            //要上传到第几张
+            var n = this.data.max_img - this.data.now_img;
+            //不上传的张数
+            var m = result.tempFilePaths.length - n;
+            result.tempFilePaths.splice(n + 1, m)
+          }
+          this.setData({
+            img: this.data.img.concat(result.tempFilePaths),
+            now_img: this.data.now_img + result.tempFilePaths.length,
+          })
+        },
+        fail: () => {},
+        complete: () => {},
+      });
     }
   },
 
   //删除照片
-  img_del:function(e){
-    var that=this;
-    that.data.img.splice(e.target.id,1);
+  img_del: function (e) {
+    var that = this;
+    that.data.img.splice(e.target.id, 1);
     this.setData({
-      now_img:this.data.now_img-1,
-      img:this.data.img,
+      now_img: this.data.now_img - 1,
+      img: this.data.img,
     })
   },
   //点击照片
@@ -152,43 +141,37 @@ Page({
       input_height: "height:" + h2 + "rpx;",
     })
   },
-  
+
   //相机
   go_camera: function () {
     this.setData({
       bottom: "true"
     })
     //超过单次贴图片张数
-    if(this.data.now_img>this.data.max_img)
-    {
+    if (this.data.now_img > this.data.max_img) {
       wx.showToast({
-        title: '已经超过可上次图片张数',
+        title: '已达上传上限',
         icon: 'none',
-        image: '',
         duration: 1500,
         mask: false,
-        success: (result)=>{
-          
-        },
-        fail: ()=>{},
-        complete: ()=>{}
       });
     }
-    else{  
-    wx.chooseImage({
-      count: 5,
-      sizeType: ['original', 'compressed'],
-      sourceType: ['camera'],
-      success: (result) => {
-        this.setData({
-          img:this.data.img.concat(result.tempFilePaths),
-          now_img:this.data.now_img+1,
-        })
-      },
-      fail: () => {},
-      complete: () => {}
-    });
-  }
+    //拍照
+    else {
+      wx.chooseImage({
+        count: 5,
+        sizeType: ['original', 'compressed'],
+        sourceType: ['camera'],
+        success: (result) => {
+          this.setData({
+            img: this.data.img.concat(result.tempFilePaths),
+            now_img: this.data.now_img + 1,
+          })
+        },
+        fail: () => {},
+        complete: () => {}
+      });
+    }
   },
 
   //输入标题
@@ -204,62 +187,65 @@ Page({
     })
   },
   //提交数据
-  sumbita: function () {
-    console.log(this.data.title + this.data.mes)
+  sumbit: function () {
+    var that = this
+    that.setData({
+      pic_open: true,
+    })
+    //确认弹窗
+    wx.showModal({
+      title: '',
+      content: '是否发帖',
+      confirmColor: 'rgb(255, 70, 70)',
+      success: function (res) {
+        //确认选项
+        if (res.confirm) {
+          //加载弹窗
+          wx.showLoading({
+            title: "提交中",
+          });
+          //提交数据
+          var reqTask = wx.request({
+            url: 'https://bilibili.com',
+            data: {
+              openid:"",
+              mes: that.data.mes,
+              title: that.data.mes,
+              img: that.data.img,
+            },
+            header: {
+              'content-type': 'application/json'
+            },
+            method: 'POST',
+            dataType: 'json',
+            responseType: 'text',
+            success: (result) => {
+              console.log(result);
+              //加载弹窗关闭
+              wx.hideLoading();
+              // 返回上一页
+              wx.navigateBack({
+                delta: 1
+              })
+              // 成功弹窗
+              wx.showToast({
+                title: '发帖成功',
+                icon: 'sucess',
+                duration: 1500,
+              });
+            },
+            fail: () => {
+              wx.showToast({
+                title: '服务器繁忙',
+                icon: 'none',
+                duration: 1500,
+              })
+            },
+            complete: () => {}
+          });
+        } else {}
+      }
+    })
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-    
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
+  
 })

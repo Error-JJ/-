@@ -1,3 +1,6 @@
+page {
+  background: linear-gradient(#fff8ed, #ffd27d);
+}
 .top {
   width: 100%;
   height: 130rpx;
@@ -25,17 +28,18 @@
   color: #fff;
 }
 .placard {
-  background: linear-gradient(#fff8ed, #ffd27d);
   position: absolute;
   top: 131rpx;
   width: 100%;
-  min-height: 100%;
+  height: 1200rpx;
+  box-sizing: border-box;
 }
 .placard .placard_title_place {
   border-bottom: solid 3rpx #b2b2b2;
   width: 100%;
   padding: 28rpx;
   box-sizing: border-box;
+  margin-bottom: 40rpx ;
 }
 .placard .placard_title_place .placard_title {
   letter-spacing: 1.5rpx;
@@ -49,72 +53,37 @@
   width: 85%;
   left: 50%;
   position: relative;
-  margin-top: 30rpx;
+  margin-bottom: 40rpx;
   transform: translate(-50%);
   background-color: rgba(255, 255, 255, 0.733);
   padding: 35rpx;
+  padding-bottom: 18rpx;
   border: none 1rpx #ebebeb;
   border-radius: 2%;
   box-shadow: 5px 5px 10px -7px #969696;
   margin-bottom: 25rpx;
 }
-.placard .placard_one .user_place {
-  width: 100%;
-  height: 60rpx;
-}
-.placard .placard_one .user_place .placard_icon_place {
-  width: 80rpx;
-  height: 80rpx;
-  display: inline-block;
-  vertical-align: top;
-  border-radius: 10%;
-  overflow: hidden;
-}
-.placard .placard_one .user_place .placard_icon_place .placard_icon {
-  width: 100%;
-  height: 100%;
-}
-.placard .placard_one .user_place .placard_name {
-  margin-left: 20rpx;
-  font-size: 30rpx;
-  font-weight: 600;
-}
-.placard .placard_one .user_place .placard_date {
-  font-size: 28rpx;
-  color: #b2b2b2;
-  position: absolute;
-  left: 18.5%;
-  top: 33%;
-}
-.placard .placard_one .user_place .placard_num {
-  font-size: 28rpx;
-  color: #b2b2b2;
-  position: absolute;
-  left: 90%;
-  top: 10%;
-}
 .placard .placard_one .placard_message_place {
-  margin-top: 50rpx;
   position: relative;
 }
 .placard .placard_one .placard_message_place .placard_message {
+  letter-spacing: 2rpx;
   word-break: break-all;
   word-wrap: break-word;
 }
-.placard_bottom {
-  width: 90rpx;
-  height: 90rpx;
-  background-color: #888888;
-  position: fixed;
-  top: 87%;
-  right: 5%;
-  border-radius: 50%;
-  text-align: center;
-}
-.placard_bottom .bottom_icon {
-  color: #fff;
+.placard .placard_one .placard_more {
   position: absolute;
-  top: 50%;
-  font-size: 45rpx;
-  transform: translate(-50%, -50%);
+  right: 15rpx;
+  top: 39rpx;
+  font-size: 36rpx;
+  width: 95%;
+  text-align: right;
+}
+.placard .placard_one .placard_message_place2 {
+  margin-top: 30rpx;
+  position: relative;
+}
+.placard .placard_one .placard_message_place2 .placard_message {
+  word-break: break-all;
+  word-wrap: break-word;
 }

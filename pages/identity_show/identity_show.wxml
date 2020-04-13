@@ -1,0 +1,26 @@
+<!-- 顶部 -->
+<view class="top" >
+    <image src="../../pic/22.jpg" class="top_img" />
+    <text class="iconfont icon-fanhui top_back" bindtap="back"></text>
+    <view class="title">身份信息</view>
+</view>
+<!-- 内容 -->
+<scroll-view scroll-y="{{true}}" class="placard" refresher-enabled="{{true}}" refresher-threshold="{{50}}" refresher-default-style="black"  refresher-triggered="{{triggered}}"  bindrefresherrefresh="onRefresh" scroll-with-animation="{{true}}">
+    <!-- 贴 -->
+    <navigator url="../identity_alt/identity_alt?mes={{item}}" class="placard_one" wx:for="{{ user_address }}">
+        <view class="user_place">
+            <view class="placard_icon_place">
+                <text class="iconfont icon-gwxxzhusuodizhi placard_icon" />
+            </view>
+            <text class="placard_name">{{ item.user_name }}</text>
+            <text class="placard_name">{{ item.adress }}</text>
+            <text class="placard_state" style="{{item.state=='审核中'?'color:red':'color:green'}}">{{ item.state }}</text>
+        </view>
+    </navigator>
+    <navigator url="../identity/identity">
+        <view class="identity_add">
+            <text class="iconfont icon-hao add_icon"></text>
+            </view>
+    </navigator>
+    
+</scroll-view>

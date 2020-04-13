@@ -1,0 +1,8 @@
+<!-- 顶部 -->
+<view class="top" >
+    <image src="../../pic/22.jpg" class="top_img" />
+    <text class="iconfont icon-fanhui top_back" bindtap="back"></text>
+    <view class="title">打卡记录</view>
+</view>
+<calendar class="ss" speciallist='{{speciallist}}'
+ next="{{false}}" prev="{{false}}"/>

@@ -1,6 +1,6 @@
 <!-- 顶部导航栏 -->
 <view class="top">
-    <image src="../../pic/22.jpg" class="top_img" catchtap='navmap' />
+    <image src="../../pic/22.jpg" class="top_img" />
     <view class="title">社区</view>
 </view>
 <!-- 帖 -->

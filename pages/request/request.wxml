@@ -1,32 +1,25 @@
 <!-- 顶部导航栏 -->
 <view class="top">
-    <image src="../../pic/22.jpg" class="top_img" catchtap='navmap' />
+    <image src="../../pic/22.jpg" class="top_img"/>
     <text class="iconfont icon-fanhui top_back" bindtap="back"></text>
-    <view class="title">详情</view>
+    <view class="title">帮助</view>
 </view>
 <!-- 内容 -->
-<view class="placard">
+<scroll-view scroll-y="{{true}}" class="placard">
     <!-- 标题 -->
     <view class="placard_title_place">
-        <text class="placard_title">{{ title }}</text>
+        <text class="placard_title">常见问题</text>
     </view>
-    <!-- 贴 -->
+    <!-- 问答 -->
     <view class="placard_one" wx:for="{{ placard }}">
-        <view class="user_place">
-            <view class="placard_icon_place">
-                <image class="placard_icon" src="{{ item.placard_icon }}" />
-            </view>
-            <text class="placard_name">{{ item.placard_name }}</text>
-            <text class="placard_date">{{ item.placard_date }}</text>
-            <text class="placard_num">{{ index+1 }}楼</text>
+        <!-- 问 -->
+        <view class="placard_message_place" >
+            <text class="placard_message">{{ item.placard_question }}</text>
         </view>
-        <view class="placard_message_place">
+        <text id="{{index}}"  catchtap="answer" class="iconfont icon-you-copy placard_more"></text>
+        <!-- 答 -->
+        <view class="placard_message_place2" hidden="{{item.answer}}">
             <text class="placard_message">{{ item.placard_message }}</text>
         </view>
     </view>
-</view>
-<navigator src="">
-    <view class="placard_bottom">
-        <text class="iconfont icon-icon bottom_icon"></text>
-    </view>
-</navigator>
+</scroll-view>

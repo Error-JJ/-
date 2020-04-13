@@ -1,3 +1,7 @@
+page{
+    overflow: hidden;
+    background: linear-gradient(rgb(255, 248, 237), rgb(255, 210, 125));
+}
 .top {
     width: 100%;
     height: 130rpx;
@@ -28,13 +32,11 @@
     }
 }
 
-.placard {
-    background: linear-gradient(rgb(255, 248, 237), rgb(255, 210, 125));
+.placard { 
     position: absolute;
     top: 131rpx;
     width: 100%;
-    min-height: 100%;
-
+    height: 1200rpx;
     .placard_title_place {
         //background: linear-gradient( to left,rgb(238, 39, 39), rgb(255, 112, 86));
         border-bottom: solid 3rpx #b2b2b2;
@@ -119,10 +121,29 @@
     }
 }
 
+.go_top {
+    width: 90rpx;
+    height: 90rpx;
+    background-color: rgba(0, 0, 0, 0.664);
+    position: fixed;
+    top: 79%;
+    right: 5%;
+    border-radius: 50%;
+    text-align: center;
+
+    .to_top_icon {
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        font-size: 50rpx;
+        transform: translate(-50%, -50%);
+    }
+}
+
 .placard_bottom {
     width: 90rpx;
     height: 90rpx;
-    background-color: #888888;
+    background-color: rgba(0, 0, 0, 0.664);
     position: fixed;
     top: 87%;
     right: 5%;

@@ -1,0 +1,24 @@
+<!-- 顶部导航栏 -->
+<view class="top">
+    <image src="../../pic/22.jpg" class="top_img" />
+    <text class="iconfont icon-fanhui top_back" bindtap="back"></text>
+    <view class="title">通知</view>
+</view>
+<!-- 内容 -->
+<scroll-view scroll-y="{{true}}" class="placard" refresher-enabled="{{true}}" refresher-threshold="{{50}}" refresher-default-style="black" refresher-triggered="{{triggered}}" bindrefresherrefresh="onRefresh" scroll-with-animation="{{true}}">
+    <!-- 贴 -->
+    <view class="placard_one" wx:for="{{ placard }}">
+        <view class="placard_icon_place">
+            <text class=" iconfont icon-laba placard_icon"></text>
+        </view>
+        <text class="placard_title">{{ item.placard_name }}</text>
+        <view class="placard_message_place">
+            <text class="placard_message">{{ item.placard_message }}</text>
+        </view>
+        <view class="placard_date">{{ item.placard_date }}</view>
+    </view>
+</scroll-view>
+<!-- 回到顶部 -->
+<view class="go_top" bindtap="go_top">
+    <text class="iconfont icon-top to_top_icon"></text>
+</view>

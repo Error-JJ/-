@@ -15,7 +15,7 @@
 		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
 		"checkInvalidKey": true,
-		"checkSiteMap": true,
+		"checkSiteMap": false,
 		"uploadWithSourceMap": true,
 		"babelSetting": {
 			"ignore": [],
@@ -59,15 +59,29 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "pages/request/request",
-					"pathName": "pages/request/request",
+					"name": "pages/identity_alt/identity_alt",
+					"pathName": "pages/identity_alt/identity_alt",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "pages/help/help",
+					"pathName": "pages/help/help",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/identity_show/identity_show",
+					"pathName": "pages/identity_show/identity_show",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "pages/help/help",
-					"pathName": "pages/help/help",
+					"name": "pages/identity/identity",
+					"pathName": "pages/identity/identity",
 					"query": "",
 					"scene": null
 				}

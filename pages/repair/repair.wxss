@@ -1,5 +1,5 @@
 page {
-  background: linear-gradient(#ffffff, #ffb85c);
+  background: linear-gradient(#fff8ed, #ffd27d);
 }
 .top {
   top: 0;
