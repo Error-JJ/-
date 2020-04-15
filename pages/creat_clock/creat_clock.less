@@ -146,9 +146,11 @@ page {
     }
 }
 .black{
-    position: absolute;
+    position: fixed;
+    top:0;
     height: 100%;
     width: 100%;
+    z-index: 2;
     background-color: rgba(0, 0, 0, 0.7);
 }
 .ch{
@@ -158,12 +160,14 @@ page {
     position: fixed;
     bottom: 0;
     left: 0rpx;
+    z-index: 2;
     .cel{
         position: absolute;
         top: 20rpx;
         left: 30rpx;
         font-size: 36rpx;
         color: #888888;
+        z-index: 2;
         }
     .sure{
         position: absolute;
@@ -171,9 +175,16 @@ page {
         right: 30rpx;
         font-size: 36rpx;
         color: rgb(255, 70, 70);
+        z-index: 2;
         }
-    .room_ch{
+    .room_ch1{
         position: relative;
         left: 0rpx;
+        text-align: right;
+    }
+    .room_ch2{
+        position: relative;
+        left: 0rpx;
+        text-align:left;
     }
 }

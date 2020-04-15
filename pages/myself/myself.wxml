@@ -23,7 +23,7 @@
         </view>
     </navigator>
 
-    <navigator url="">
+    <navigator url="../bill/bill">
         <view class="identity">
             <text></text>
             <view class="identity_coin">
@@ -39,6 +39,7 @@
             <view class="identity_coin">
                 <text class="identity_text iconfont .icon-B"></text>
             </view>
+            <view wx:if="{{notic}}" class="new"></view>
             <text class="identity_text">通知</text>
         </view>
     </navigator>

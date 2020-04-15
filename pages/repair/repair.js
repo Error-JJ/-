@@ -1,3 +1,4 @@
+var app = getApp();
 Page({
   data: {
     choose1:true,
@@ -90,7 +91,8 @@ Page({
   onLoad: function (options) {
     var reqTask = wx.request({
       url: 'https://www.bilibili.com/',
-      //header: {'content-type':'application/json'},
+      header: {'content-type':'application/json'},
+      data:{openid:app.data.openid},
       method: 'GET',
       dataType: 'json',
       responseType: 'text',

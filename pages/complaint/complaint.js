@@ -1,3 +1,4 @@
+var app = getApp();
 Page({
   data: {
     mes: "",
@@ -38,7 +39,7 @@ Page({
           var reqTask = wx.request({
             url: 'https://www.bilibili.com/',
             data: {
-              openid:"",
+              openid:app.data.openid,
               message:this.data.mes,
             },
             header: {'content-type':'application/json'},

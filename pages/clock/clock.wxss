@@ -28,7 +28,80 @@ page {
   color: #fff;
 }
 .ss {
+  background-color: rgba(255, 255, 255, 0.753);
+  top: -30rpx;
   width: 100%;
+  box-sizing: border-box;
+  left: 50%;
+  transform: translateX(-50%);
   position: absolute;
   margin-top: 220rpx;
+  color: #000000;
+}
+.closelaststyle {
+  color: #888888;
+}
+.header-style {
+  background-color: #ff4646;
+  color: #fff;
+  font-weight: 600;
+  font-size: 40rpx;
+}
+.weektitle-style {
+  color: #000;
+  font-weight: 600;
+}
+.input_btn {
+  position: relative;
+  top: 900rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+  color: #606266;
+  -webkit-appearance: none;
+  text-align: center;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  transition: 0.1s;
+  font-weight: 500;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  padding: 12px 20px;
+  font-size: 34rpx;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #ff4646;
+  border-color: #ff4646;
+  height: 80rpx;
+  width: 625rpx;
+}
+.bottom2 {
+  position: fixed;
+  top: 900rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-appearance: none;
+  outline: none;
+  margin: 0;
+  transition: 0.1s;
+  font-weight: 500;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  padding: 12px 20px;
+  font-size: 34rpx;
+  border-radius: 4px;
+  color: #ff4646;
+  font-weight: 600;
 }

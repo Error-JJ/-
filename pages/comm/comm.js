@@ -86,7 +86,7 @@ Page({
    */
   onShow: function () {
     var reqTask = wx.request({
-      url: 'https://www.bilibili.com/',
+      url: 'https://www.baidu.com/',
       header: {'content-type':'application/json'},
       method: 'GET',
       dataType: 'json',

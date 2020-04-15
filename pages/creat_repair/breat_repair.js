@@ -1,3 +1,4 @@
+var app = getApp();
 Page({
   data: {
     mes: "",
@@ -20,12 +21,23 @@ Page({
         sizeType: ['original', 'compressed'],
         sourceType: ['album','camera'],
         success: (result) => {
-          var ch= "img["+e.currentTarget.id+"].src";
-          var ch2= "img["+e.currentTarget.id+"].show";
-          that.setData({
-            [ch]: result.tempFilePaths,
-            [ch2]:true,
-          })
+          var upTask = wx.uploadFile({
+            url: 'https://www.baidu.com',
+            filePath: result.tempFilePaths,
+            name: result.tempFilePaths,
+            formData: {},
+            success: (result2)=>{
+              var ch= "img["+e.currentTarget.id+"].src";
+              var ch2= "img["+e.currentTarget.id+"].show";
+              that.setData({
+                [ch]: result2.tempFilePaths,
+                [ch2]:true,
+              })
+            },
+            fail: ()=>{console.log("上传照片失败")},
+            complete: ()=>{}
+          });
+          
         },
         fail: () => {},
         complete: () => {},
@@ -67,7 +79,7 @@ Page({
           var reqTask = wx.request({
             url: 'https://bilibili.com',
             data: {
-              openid:"",
+              openid:app.data.openid,
               mes: that.data.mes,
               goods: that.data.goods,
               place:that.data.place,

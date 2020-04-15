@@ -1,7 +1,8 @@
+var app = getApp();
 Page({
   data: {
     temp: "",
-    temp2:"",
+    temp2:"36.0",
     out: false,
     doubt: false,
     sure: false,
@@ -94,7 +95,7 @@ Page({
           var reqTask = wx.request({
             url: 'https://www.bilibili.com/',
             data: {
-              openid: "",
+              openid: app.data.openid,
               temp: that.data.temp,
               out: that.data.out,
               doubt: that.data.double,

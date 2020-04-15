@@ -34,8 +34,26 @@ page {
   height: 700rpx;
   box-sizing: border-box;
 }
+.input .ch_adress {
+  width: 100%;
+  height: 60rpx;
+  position: absolute;
+  top: 40rpx;
+  display: inline-block;
+  background-color: #fff;
+  font-size: 32rpx;
+  padding: 10rpx;
+  padding-left: 15rpx ;
+  border-top: solid 1px #888888;
+  border-bottom: solid 1px #888888;
+}
+.input .ch_adress .middle_adress {
+  margin-left: 20rpx ;
+  display: inline-block;
+}
 .input .input_place {
-  margin-top: 40rpx;
+  padding: 10rpx;
+  margin-top: 150rpx;
   height: 60%;
   width: 100%;
   background-color: #fff;
@@ -46,7 +64,7 @@ page {
 .input .input_sum {
   position: absolute;
   right: 10rpx;
-  top: 59%;
+  top: 72%;
   color: #b2b2b2;
 }
 .input .input_btn {
@@ -79,4 +97,40 @@ page {
   border-color: #ff4646;
   height: 80rpx;
   width: 625rpx ;
+}
+.black {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+.ch {
+  background-color: #ffffff;
+  width: 100%;
+  height: 30%;
+  position: fixed;
+  bottom: 0;
+  z-index: 3;
+}
+.ch .cel {
+  position: absolute;
+  top: 20rpx;
+  left: 30rpx;
+  font-size: 36rpx;
+  color: #888888;
+  z-index: 3;
+}
+.ch .sure {
+  position: absolute;
+  z-index: 3;
+  top: 20rpx;
+  right: 30rpx;
+  font-size: 36rpx;
+  color: #ff4646;
+}
+.ch .room_ch {
+  position: relative;
+  left: 0rpx;
+  text-align: center;
 }

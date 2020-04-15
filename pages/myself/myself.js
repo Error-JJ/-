@@ -1,20 +1,28 @@
-// pages/myself/myself.js
+var app = getApp();
 Page({
-  date:{
-    // userinfo:[],
+  data:{
+    notic:false,
   },
-  // onLoad:function(e){
-  //   wx.getUserInfo({
-  //     withCredentials: 'false',
-  //     lang: 'zh_CN',
-  //     timeout:10000,
-  //     success: (result)=>{
-  //       this.setData({
-  //         userinfo:result.userInfo
-  //       })
-  //     },
-  //     fail: ()=>{console.log("获取用户名称头像失败")},
-  //     complete: ()=>{}
-  //   });
-  // }
+  
+  onShow:function(){
+    var reqTask = wx.request({
+      url: 'https://www.baidu.com',
+      data: {
+        openid:app.data.openid,
+      },
+      header: {'content-type':'application/json'},
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: (result)=>{
+        console.log(result);
+        this.setData({
+          notic:false,
+        })
+        //查看是否有未读信息
+      },
+      fail: ()=>{},
+      complete: ()=>{}
+    });
+  }
 })

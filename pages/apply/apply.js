@@ -1,7 +1,13 @@
+var app = getApp();
 Page({
   data: {
     mes:"",
-    state_num:4, 
+    state_num:0, 
+    date:"",
+    adress_all:app.data.adress_all,
+    adress_value:"0",
+    close:true,
+    adress:"门牌号"
   },
 
   //回到上一个页面
@@ -16,6 +22,33 @@ Page({
       mes:e.detail.value,
     })
   },
+  //展开下拉栏
+  show:function(){
+    this.setData({
+      close:false,
+    })
+  },
+  //关闭下拉栏
+  close:function(){
+    this.setData({
+      close:true,
+    })
+  },
+    //输入地址
+    bindChange:function(e){
+      var ch=e.detail.value
+      this.setData({
+        adress_value:ch,
+      })
+    },
+      //确定地址
+      sure_tem:function(){
+        var ch=this.data.adress_value;
+        this.setData({
+          adress:this.data.adress_all[ch[0]],
+          close:true,
+        })
+      },
   //提交
   sumbit:function(){
     var that = this;
@@ -34,9 +67,9 @@ Page({
           var reqTask = wx.request({
             url: 'https://www.bilibili.com/',
             data: {
-              openid:"",
+              openid:app.data.openid,
               message:this.data.mes,
-              adress:"",
+              adress:this.data.adress,
             },
             header: {'content-type':'application/json'},
             method: 'POST',
@@ -130,7 +163,7 @@ Page({
    */
   onShow: function (options) {
     var reqTask = wx.request({
-      url: 'https://www.baidu.com/',
+      url: 'https://www.bilibili.com',
       data: {
         openid:"",
         dizhi:"",
@@ -140,8 +173,9 @@ Page({
       dataType: 'json',
       responseType: 'text',
       success: (result)=>{
+        console.log(options);
         this.setData({
-          state_num:4,
+          state_num:0,
         })
       },
       fail: ()=>{

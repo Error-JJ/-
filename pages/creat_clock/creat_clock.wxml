@@ -23,15 +23,15 @@
     </view>
     <view class="input_place">
         <text class="input_tip">是否疑诊</text>
-        <switch class="switch" bindchange="double" />
+        <switch class="switch" bindchange="double" color="rgb(255, 70, 70)" />
     </view>
     <view class="input_place">
         <text class="input_tip">是否确诊</text>
-        <switch class="switch" bindchange="sure" />
+        <switch class="switch" bindchange="sure" color="rgb(255, 70, 70)" />
     </view>
     <view class="input_place">
         <text class="input_tip">是否接触过疑、确诊人员</text>
-        <switch class="switch" bindchange="touch" />
+        <switch class="switch" bindchange="touch" color="rgb(255, 70, 70)" />
     </view>
     <view class="input_place2">
         <text class="input_tip2">不适症状</text>
@@ -45,16 +45,16 @@
     <view type="warn" class="input_btn" bindtap="sumbit">提交</view>
 </view>
 <!-- 黑幕 -->
-<view class="black" wx:if="{{!close}}"></view>
+<view class="black" wx:if="{{!close}}" catchtap="close"></view>
 <view class="ch" style="transition:0.3s;{{close?'height:0px':''}}">
     <text class="cel" catchtap="close">取消</text>
     <text class="sure" catchtap="sure_tem">确定</text>
-    <picker-view indicator-style="height: 50px;" style="width: 15%; height: 200px;margin-left:50%;transform: translateX(-50%);" bindchange="bindChange">
+    <picker-view indicator-style="height: 50px;" style="width: 100%; height: 200px;" bindchange="bindChange">
         <picker-view-column>
-            <view wx:for="{{tem1}}" class="room_ch">{{item}}.</view>
+            <view wx:for="{{tem1}}" class="room_ch1">{{item}}.</view>
         </picker-view-column>
         <picker-view-column>
-            <view wx:for="{{tem2}}" class="room_ch">{{item}}</view>
+            <view wx:for="{{tem2}}" class="room_ch2">{{item}}</view>
         </picker-view-column>
     </picker-view>
 </view>

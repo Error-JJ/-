@@ -8,7 +8,12 @@ Page({
       delta: 1
     })
   },
-
+  // 回到顶部
+  go_top: function (e) {
+    this.setData({
+      scrolltop: 0,
+    })
+  },
   //展开
   answer: function (e) {
     var ch = "placard[" + e.target.id + "].answer";
@@ -40,7 +45,7 @@ Page({
             },
             {
               placard_question: "tomcat",
-              placard_message: "这次终于不跳票\n了",
+              placard_message: "这次终于不跳票了这次终于不跳票了这次终于不跳票了",
             }
           ]
         });

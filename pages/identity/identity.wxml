@@ -26,7 +26,7 @@
 <!-- 提交 -->
 <view type="warn" class="input_btn" bindtap="sumbit">提交</view>
 <!-- 黑幕 -->
-<view class="black" wx:if="{{!close}}"></view>
+<view class="black" wx:if="{{!close}}" catchtap="close"></view>
 <view class="ch" style="transition:0.3s;{{close?'height:0px':''}}">
     <text class="cel" catchtap="close">取消</text>
     <text class="sure" catchtap="sure_tem">确定</text>

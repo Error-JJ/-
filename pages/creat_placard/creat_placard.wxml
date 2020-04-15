@@ -7,12 +7,12 @@
 <!-- 输入 -->
 <view class="input">
     <!-- 标题 -->
-    <input adjust-position="{{true}}" class="input_title" placeholder="标题" adjust-position="{{false}}" bindfocus="focus_title" bindinput="title_input" bindblur="repair1" value="{{title}}"  />
+    <input adjust-position="{{true}}" auto-focus="{{true}}" class="input_title" placeholder="标题" adjust-position="{{false}}" bindfocus="focus_title" bindinput="title_input" bindblur="repair1" value="{{title}}"/>
     <!-- 内容 -->
-    <textarea class="input_place" adjust-position="{{false}}" placeholder="请输入内容" bindblur="repair2" cursor-spacing="100rpx" show-confirm-bar="{{false}}" bindfocus="focus_mes" value="{{mes}}" bindinput="mes_input" style="{{input_height}}"></textarea>
+    <textarea class="input_place" adjust-position="{{false}}" placeholder="请输入内容" bindblur="repair2" cursor-spacing="100rpx" show-confirm-bar="{{false}}" bindfocus="focus_mes" value="{{mes}}" bindinput="mes_input" style="{{input_height}}"></textarea> 
 </view>
 <!-- 底部 -->
-<view class="bottom " style="{{keyheight}}">
+<view class="bottom" style="{{keyheight}}">
     <!-- 图片按钮 -->
     <view class="input_pic" bindtap="go_pic">
         <text class="iconfont icon-zhaopian pic "></text>

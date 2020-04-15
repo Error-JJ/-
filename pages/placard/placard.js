@@ -28,7 +28,7 @@ Page({
       title:options.title,
     })
     var reqTask = wx.request({
-      url: "https://bilibili.com",
+      url: "https://www.baidu.com",
       header: {'content-type':'application/json'},
       data:{
         forum_id:options.fourm_id,

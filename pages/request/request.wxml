@@ -5,7 +5,7 @@
     <view class="title">帮助</view>
 </view>
 <!-- 内容 -->
-<scroll-view scroll-y="{{true}}" class="placard">
+<scroll-view scroll-y="{{true}}" scroll-with-animation="{{true}}" class="placard" scroll-top="{{scrolltop}}">
     <!-- 标题 -->
     <view class="placard_title_place">
         <text class="placard_title">常见问题</text>
@@ -23,3 +23,7 @@
         </view>
     </view>
 </scroll-view>
+<!-- 回到顶部 -->
+<view class="go_top" bindtap="go_top">
+    <text class="iconfont icon-top to_top_icon"></text>
+</view>

@@ -1,0 +1,39 @@
+<!-- 顶部导航栏 -->
+<view class="top">
+    <image src="../../pic/22.jpg" class="top_img"/>
+    <text class="iconfont icon-fanhui top_back" bindtap="back"></text>
+    <view class="title">账单</view>
+</view>
+
+
+<!-- 主体显示区域 -->
+<scroll-view scroll-y="{{true}}" class="place" scroll-with-animation="{{true}}" scroll-top="{{scrolltop}}">
+<!-- 单期账单 -->
+<view class="repair_place" wx:for="{{mes}}">
+    <!-- 内容 -->
+    <view class="repair_place2" >
+        <view class="repair_title">
+            <text >{{item.adress}}</text>
+            <text class="repair_date">{{item.date}}</text>
+        </view>
+        <view class="repair_mes color1">
+            <text>水费：{{item.water_pay}}元</text>
+            <text class="mes2">用水量：{{item.water_num}}吨</text>
+        </view>
+        <view class="repair_mes color2">
+            <text>电费：{{item.electricity_pay}}元</text>
+            <text class="mes2">用电量：{{item.electricity_num}}度</text>
+        </view>
+        <view class="repair_mes color3">
+            <text>物业费：{{item.manage_pay}}元</text>
+        </view>
+    </view>  
+</view>
+</scroll-view>
+
+ <!-- 回到顶部 -->
+<view class="go_top" bindtap="go_top" >
+    <text class="iconfont icon-top to_top_icon"></text>
+</view>
+
+

@@ -134,9 +134,11 @@ page {
   width: 625rpx;
 }
 .black {
-  position: absolute;
+  position: fixed;
+  top: 0;
   height: 100%;
   width: 100%;
+  z-index: 2;
   background-color: rgba(0, 0, 0, 0.7);
 }
 .ch {
@@ -146,6 +148,7 @@ page {
   position: fixed;
   bottom: 0;
   left: 0rpx;
+  z-index: 2;
 }
 .ch .cel {
   position: absolute;
@@ -153,6 +156,7 @@ page {
   left: 30rpx;
   font-size: 36rpx;
   color: #888888;
+  z-index: 2;
 }
 .ch .sure {
   position: absolute;
@@ -160,8 +164,15 @@ page {
   right: 30rpx;
   font-size: 36rpx;
   color: #ff4646;
+  z-index: 2;
 }
-.ch .room_ch {
+.ch .room_ch1 {
   position: relative;
   left: 0rpx;
+  text-align: right;
+}
+.ch .room_ch2 {
+  position: relative;
+  left: 0rpx;
+  text-align: left;
 }

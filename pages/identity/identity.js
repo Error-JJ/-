@@ -1,4 +1,4 @@
-// pages/identity/identity.js
+var app = getApp();
 Page({
 
   /**
@@ -11,7 +11,7 @@ Page({
     name:"",
     id:"",
     adress:"门牌号",
-    adress_value:"",
+    adress_value:[0,0,0],
     close:true,
   },
   //回到上一个页面
@@ -118,7 +118,7 @@ Page({
           var reqTask = wx.request({
             url: 'https://www.bilibili.com/',
             data: {
-              openid:"",
+              openid:app.data.openid,
               id:that.data.id,
               adress:this.data.adress,
               name:this.data.name,

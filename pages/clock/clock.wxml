@@ -2,7 +2,14 @@
 <view class="top" >
     <image src="../../pic/22.jpg" class="top_img" />
     <text class="iconfont icon-fanhui top_back" bindtap="back"></text>
-    <view class="title">打卡记录</view>
+    <view class="title">当月打卡</view>
 </view>
-<calendar class="ss" speciallist='{{speciallist}}'
- next="{{false}}" prev="{{false}}"/>
+<!-- 日历 -->
+<calendar class="ss" weekheight="90"  speciallist='{{speciallist}}'
+ next="{{false}}" prev="{{false}}" header-style="header-style"
+ weektitle-style="weektitle-style" circle_show="{{false}}"
+ closelaststyle="closelaststyle"/>
+<!-- 今日打卡 -->
+<navigator wx:if="{{state}}" url="../creat_clock/creat_clock" class="input_btn" >今日打卡</navigator>
+<!-- 今日完成打卡 -->
+<text wx:if="{{!state}}" class="bottom2">今日已完成打卡</text> 

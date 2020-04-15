@@ -1,8 +1,13 @@
+var app = getApp();
 Page({
   data: {
     mes: "",
     now:0,
     max:150,
+    adress_all:["B-2201","E-3007"],
+    adress_value:"0",
+    close:true,
+    adress:"门牌号"
   },
 
   //回到上一个页面
@@ -20,6 +25,33 @@ Page({
       now:e.detail.cursor
     })
   },
+  //展开下拉栏
+  show:function(){
+    this.setData({
+      close:false,
+    })
+  },
+  //关闭下拉栏
+  close:function(){
+    this.setData({
+      close:true,
+    })
+  },
+    //输入地址
+    bindChange:function(e){
+      var ch=e.detail.value
+      this.setData({
+        adress_value:ch,
+      })
+    },
+      //确定地址
+      sure_tem:function(){
+        var ch=this.data.adress_value;
+        this.setData({
+          adress:this.data.adress_all[ch[0]],
+          close:true,
+        })
+      },
   //提交
   sumbit:function(){
     var that = this;
@@ -38,7 +70,7 @@ Page({
           var reqTask = wx.request({
             url: 'https://www.bilibili.com/',
             data: {
-              openid:"",
+              openid:app.data.openid,
               message:this.data.mes,
             },
             header: {'content-type':'application/json'},

@@ -6,8 +6,22 @@
 </view>
 <!-- 输入 -->
 <view class="input">
+    <view class="ch_adress" catchtap="show">
+        <text style="{{adress=='门牌号'?'color:#888888':''}}">{{adress}}</text>
+    </view>
     <!-- 内容 -->
     <textarea class="input_place" maxlength="150" adjust-position="{{false}}" placeholder="请输入需要预约的物品" bindblur="repair2" cursor-spacing="100rpx" show-confirm-bar="{{false}}"  value="{{mes}}" bindinput="mes_input" style="{{input_height}}"></textarea>
     <text class="input_sum">{{now}}/{{max}}</text>
     <view type="warn" class="input_btn" bindtap="sumbit">提交</view>
+</view>
+<!-- 黑幕 -->
+<view class="black" wx:if="{{!close}}" catchtap="close"></view>
+<view class="ch" style="transition:0.3s;{{close?'height:0px':''}}">
+    <text class="cel" catchtap="close">取消</text>
+    <text class="sure" catchtap="sure_tem">确定</text>
+    <picker-view indicator-style="height: 40px;" style="width: 100%; height: 200px;margin-left:0%;transform: translateX(-0%);" value="{{value}}" bindchange="bindChange">
+        <picker-view-column>
+            <view wx:for="{{adress_all}}" class="room_ch">{{item}}</view>
+        </picker-view-column>
+    </picker-view>
 </view>

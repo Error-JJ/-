@@ -30,7 +30,7 @@
      </navigator>
 
    
-    <navigator class="function">
+    <navigator url="../clock/clock" class="function">
         <view class="iconfont icon-daqia function_icon "></view>
         <text class="function_text">打卡</text>
     </navigator>
@@ -43,6 +43,7 @@
 
 </view>
 <view class="bottom">
-    <view class="bottom_title">通知</view>
+    <view class="bottom_title iconfont icon-laba"> 
+        <text style="font-weight: bold;">通知</text></view>
     <view class="bottom_mes" wx:for="{{mes}}">{{item.title}}</view>
 </view>

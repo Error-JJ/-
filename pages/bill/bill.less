@@ -1,0 +1,115 @@
+page{
+    background: linear-gradient(rgb(255, 248, 237), rgb(255, 210, 125));
+}
+.top {
+    top: 0;
+    width: 100%;
+    height: 130rpx;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+    .top_img {
+        position: relative;
+        top: -180rpx;
+        width: 100%;
+        height: 1000rpx;
+    }
+
+    .title {
+        font-size: 20px;
+        color: white;
+        position: fixed;
+        left: 45%;
+        top: 4%;
+    }
+
+    .top_back {
+        position: fixed;
+        left: 3%;
+        top: 5%;
+        color: #fff;
+    }
+}
+.place{
+    width: 100%;
+    position: absolute;
+    margin-top: 130rpx;
+    height: 1204rpx;
+    .repair_place{
+    border-bottom:none 1px rgba(124, 124, 124, 0.801) ;
+    width: 90%;
+    position: relative; 
+    left: 50%;
+    transform: translate(-50%);
+    padding-bottom: 20rpx;
+    padding-top: 20rpx;
+    .repair_place2{
+        position: relative;
+        border-radius: 1%;
+        border: 1px solid rgb(255, 255, 255);
+        padding: 10px;
+        box-shadow:5px 8px 7px 0px rgb(146, 116, 77);
+        background-color: rgba(255, 255, 255, 0.5);
+        .repair_title{
+            position: relative;
+            border-bottom: solid 1px rgb(37, 37, 37);
+            font-weight: 600;
+            font-size: 40rpx;
+            padding-bottom:10rpx ;
+            .repair_date{
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-75%);
+                font-size: 28rpx;
+                display: inline-block;
+                font-weight: 500;
+                color: #888888;
+            }
+        }
+        .repair_mes{
+            position: relative;
+            padding-top: 5px;
+            word-break: break-all;
+            word-wrap: break-word;
+            font-size: 32rpx;
+            .mes2{
+                position: absolute;
+                left: 50%;             
+            }
+        }
+        .color1{
+            color: rgb(0, 162, 255);
+        }
+        .color2{
+            color: rgb(255, 174, 0);
+        }
+        .color3{
+            color: rgb(6, 179, 0);
+        }
+    }
+}
+}
+
+
+
+
+
+.go_top {
+    width: 90rpx;
+    height: 90rpx;
+    background-color: rgba(0, 0, 0, 0.664);
+    position: fixed;
+    top: 87%;
+    right: 5%;
+    border-radius: 50%;
+    text-align: center;
+
+    .to_top_icon {
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        font-size: 50rpx;
+        transform: translate(-50%, -50%);
+    }
+}

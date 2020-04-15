@@ -34,6 +34,23 @@ page {
   height: 300rpx;
   z-index: 2;
 }
+.middle .ch_adress {
+  width: 100%;
+  height: 60rpx;
+  position: absolute;
+  top: -100rpx;
+  display: inline-block;
+  background-color: #fff;
+  font-size: 32rpx;
+  padding: 10rpx;
+  padding-left: 15rpx ;
+  border-top: solid 1px #888888;
+  border-bottom: solid 1px #888888;
+}
+.middle .ch_adress .middle_adress {
+  margin-left: 20rpx ;
+  display: inline-block;
+}
 .middle .middle_input {
   padding: 10rpx;
   position: absolute;
@@ -125,4 +142,40 @@ page {
 }
 .left .left1 .suer {
   background-color: #ff4646;
+}
+.black {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+.ch {
+  background-color: #ffffff;
+  width: 100%;
+  height: 30%;
+  position: fixed;
+  bottom: 0;
+  z-index: 3;
+}
+.ch .cel {
+  position: absolute;
+  top: 20rpx;
+  left: 30rpx;
+  font-size: 36rpx;
+  color: #888888;
+  z-index: 3;
+}
+.ch .sure {
+  position: absolute;
+  z-index: 3;
+  top: 20rpx;
+  right: 30rpx;
+  font-size: 36rpx;
+  color: #ff4646;
+}
+.ch .room_ch {
+  position: relative;
+  left: 0rpx;
+  text-align: center;
 }

@@ -1,21 +1,28 @@
-// pages/clock/clock.js
+var app = getApp();
 Page({
-
+ 
   /**
    * 页面的初始数据
    */
   data: {
     speciallist: [],
+    state:true,
   },
+    //回到上一个页面
+    back: function () {
+      wx.navigateBack({
+        delta: 1
+      })
+    },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
     var reqTask = wx.request({
-      url: "https://bilibili.com",
+      url: "https://www.baidu.com",
       data: {
-        openid:"",
+        openid:app.data.openid,
       },
       header: {'content-type':'application/json'},
       method: 'GET',
@@ -23,14 +30,20 @@ Page({
       responseType: 'text',
       success: (result)=>{
         console.log(result);
+        var speciallist=[
+          { date: '2020-04-13'},
+          { date: '2020-04-14'},
+          { date: '2020-04-15'},
+          { date: '2020-04-16'},
+          { date: '2020-04-17'},
+        ];
+        for(var i=0;i<speciallist.length;i++){
+          speciallist[i].background="rgb(255, 70, 70)"
+          speciallist[i].color="#FFF"
+        }
         this.setData({
-          speciallist: [
-             { date: '2020-05-13', background: 'yellow', text:'文字1',color:'' },
-             { date: '2020-04-14', background: 'red', text: '文字2'  },
-             { date: '2020-04-15', background: 'bule', text: '文字' },
-             { date: '2020-04-16', background: 'orange', text: '文字' },
-             { date: '2020-04-17', background: 'white', text: '文字' },
-           ],
+          speciallist:speciallist,
+          //state:"",
          })
       },
       fail: ()=>{

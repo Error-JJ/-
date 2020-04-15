@@ -5,25 +5,28 @@
     <view class="title">申报</view>
 </view>
 <view class="middle">
-    <textarea wx:if="{{state_num==0}}" placeholder="请填写申报内容" bindinput="input" maxlength="140" show-confirm-bar="{{false}}" cursor-spacing="160" class="middle_input"></textarea>
+    <textarea adjust-position="{{false}}" wx:if="{{state_num==0}}" placeholder="请填写申报内容" bindinput="input" maxlength="140" show-confirm-bar="{{false}}" cursor-spacing="160" class="middle_input"></textarea>
+    <view class="ch_adress" catchtap="show" wx:if="{{state_num==0}}">
+        <text style="{{adress=='门牌号'?'color:#888888':''}}">{{adress}}</text>
+    </view>
     <view wx:if="{{state_num==0}}" class="input_btn" bindtap="sumbit">提交</view>
     <view wx:if="{{state_num==2}}" class="input_btn" catchtap="sumbit2">申请验收</view>
 </view>
 <view class="right">
     <view class="text_place" >
-        <text class="text">请提交申报内容并前往物业交押金</text>
+        <text class="text" style="{{state_num==0?'color:red':''}}">{{state_num>0?'物业已收到申报':'请提交申报内容并前往物业交押金'}}</text>
     </view>
     <view class="text_place"  wx:if="{{state_num>0}}">
-        <text class="text">等待装修公司材料并审核</text>
+        <text class="text" style="{{state_num==1?'color:red':''}}">{{state_num>1?'审核通过':'审核中'}}</text>
     </view>
     <view class="text_place"  wx:if="{{state_num>1}}">
-        <text class="text">装修中</text>
+        <text class="text" style="{{state_num==2?'color:red':''}}">{{state_num>2?'装修完毕':'装修中'}}</text>
     </view>
     <view class="text_place"  wx:if="{{state_num>2}}">
-        <text class="text">等待验收中</text>
+        <text class="text" style="{{state_num==3?'color:red':''}}">{{state_num>3?'验收通过':'等待验收'}}</text>
     </view>
     <view class="text_place"  wx:if="{{state_num>3}}">
-        <text class="text">2020-6-1后取回押金</text>
+        <text class="text" style="{{state_num==4?'color:red':''}}">2020-6-1后取回押金</text>
     </view>
 </view>
 <view class="left">
@@ -46,4 +49,16 @@
     <view class="left1" wx:if="{{state_num>3}}">
         <view class="circle {{state_num==4?'suer':''}}"></view>
     </view>
+</view>
+
+<!-- 黑幕 -->
+<view class="black" wx:if="{{!close}}"></view>
+<view class="ch" style="transition:0.3s;{{close?'height:0px':''}}">
+    <text class="cel" catchtap="close">取消</text>
+    <text class="sure" catchtap="sure_tem">确定</text>
+    <picker-view indicator-style="height: 40px;" style="width: 100%; height: 200px;margin-left:0%;transform: translateX(-0%);" value="{{value}}" bindchange="bindChange">
+        <picker-view-column>
+            <view wx:for="{{adress_all}}" class="room_ch">{{item}}</view>
+        </picker-view-column>
+    </picker-view>
 </view>

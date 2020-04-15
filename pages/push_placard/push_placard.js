@@ -1,4 +1,4 @@
-// pages/creat_placard/creat_placard.js
+var app = getApp();
 Page({
 
   /**
@@ -73,7 +73,7 @@ Page({
     //上传
     else {
       wx.chooseImage({
-        count: 5,
+        count: 1,
         sizeType: ['original', 'compressed'],
         sourceType: ['album'],
         success: (result) => {
@@ -84,11 +84,23 @@ Page({
             //不上传的张数
             var m = result.tempFilePaths.length - n;
             result.tempFilePaths.splice(n + 1, m)
-          }
-          this.setData({
-            img: this.data.img.concat(result.tempFilePaths),
-            now_img: this.data.now_img + result.tempFilePaths.length,
-          })
+          };
+          var upTask = wx.uploadFile({
+            url: 'https://bilibili.com',
+            filePath:result.tempFilePaths ,
+            name:"img" ,
+            formData: {},
+            success: (result2)=>{
+              console.log(result2)
+              this.setData({
+                img: this.data.img.concat(result2.src),
+                now_img: this.data.now_img + 1,
+              })
+            },
+            fail: ()=>{},
+            complete: ()=>{}
+          });
+          
         },
         fail: () => {},
         complete: () => {},
@@ -100,6 +112,21 @@ Page({
   img_del: function (e) {
     var that = this;
     that.data.img.splice(e.target.id, 1);
+    var reqTask = wx.request({
+      url: 'https://www.baidu.com',
+      data: {
+        src:that.data.img[e.target.id],
+      },
+      header: {'content-type':'application/json'},
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: (result)=>{
+        
+      },
+      fail: ()=>{console.log("删除照片失败")},
+      complete: ()=>{}
+    });
     this.setData({
       now_img: this.data.now_img - 1,
       img: this.data.img,
@@ -140,14 +167,26 @@ Page({
     //拍照
     else {
       wx.chooseImage({
-        count: 5,
+        count: 1,
         sizeType: ['original', 'compressed'],
         sourceType: ['camera'],
         success: (result) => {
-          this.setData({
-            img: this.data.img.concat(result.tempFilePaths),
-            now_img: this.data.now_img + 1,
-          })
+          var upTask = wx.uploadFile({
+            url: 'https://www.baidu.com',
+            filePath: result.tempFilePaths,
+            name: 'img',
+            formData: {},
+            success: (result2)=>{
+              console.log(result2);
+              this.setData({
+                img: result2.tempFilePaths,
+                now_img: this.data.now_img + 1,
+              })
+            },
+            fail: ()=>{console.log("上传拍照失败")},
+            complete: ()=>{}
+          });
+          
         },
         fail: () => {},
         complete: () => {}
@@ -191,7 +230,7 @@ Page({
           var reqTask = wx.request({
             url: 'https://bilibili.com',
             data: {
-              openid:"",
+              openid:app.data.openid,
               mes: that.data.mes,
               img: that.data.img,
               forum_id: that.data.forum_id,

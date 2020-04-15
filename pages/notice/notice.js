@@ -1,6 +1,7 @@
+var app = getApp();
 Page({
   data: {
-    placard: [],
+    placard: [""],
     triggered: false,
     forum_id: "",
     _freshing: false,
@@ -17,7 +18,14 @@ Page({
       delta: 1
     })
   },
-
+// 已读操作
+ read:function(e){
+   var ch=this.data.placard;
+   ch[e.currentTarget.id].read=true;
+   this.setData({
+    placard:ch,
+   });
+ },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -27,21 +35,25 @@ Page({
       header: {
         'content-type': 'application/json'
       },
-      data: {},
+      data: {
+        openid:app.data.openid
+      },
       method: 'GET',
       dataType: 'json',
       responseType: 'text',
       success: (result) => {
         this.setData({
           placard: [{
-              placard_name: "通过审核",
-              placard_message: "这次终于不跳票了这次终于不跳票了这次终于不跳票了这次终于不跳票了",
-              placard_date: "2020-3-22",
+              title: "通过审核",
+              mes: "这次终于不跳票了这次终于不跳票了这次终于不跳票了这次终于不跳票了",
+              date: "2020-3-22",
+              read:false,
             },
             {
-              placard_name: "预约成功",
-              placard_message: "这次终于不跳票了",
-              placard_date: "2020-3-22",
+              title: "预约成功预约成功预约成功预约",
+              mes: "这次终于不跳票了",
+              date: "2020-3-22",
+              read:true,
             }
           ]
         })
@@ -73,7 +85,9 @@ Page({
     var reqTask = wx.request({
       url: 'https://www.bilibili.com/',
       //header: {'content-type':'application/json'},
-      data: {},
+      data: {
+        openid:app.data.openid,
+      },
       method: 'GET',
       dataType: 'json',
       responseType: 'text',
@@ -82,10 +96,11 @@ Page({
         this.setData({
           title: "FF6重置版要发售了",
           placard: [{
-            placard_name: "tomcat",
-            placard_message: "这次终于不跳票了",
-            placard_date: "2020-3-22",
-          }]
+            title: "通过审核",
+            mes: "这次终于不跳票了这次终于不跳票了这次终于不跳票了这次终于不跳票了",
+            date: "2020-3-22",
+            read:false,
+          },]
         })
       },
       fail: () => {

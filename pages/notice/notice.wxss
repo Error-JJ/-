@@ -65,8 +65,15 @@ page {
   position: relative;
   margin-left: 80rpx;
   font-size: 40rpx;
-  font-weight: 600;
+  font-weight: bold;
   letter-spacing: 2rpx;
+}
+.placard .placard_one .placard_new {
+  position: absolute;
+  font-size: 70rpx;
+  color: #ff4646;
+  left: 29rpx;
+  top: 75rpx;
 }
 .placard .placard_one .placard_message_place {
   margin-top: 20rpx;

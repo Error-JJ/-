@@ -59,29 +59,29 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "pages/identity_alt/identity_alt",
-					"pathName": "pages/identity_alt/identity_alt",
+					"name": "pages/notice/notice",
+					"pathName": "pages/notice/notice",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": 1,
-					"name": "pages/help/help",
-					"pathName": "pages/help/help",
+					"name": "pages/first/first",
+					"pathName": "pages/first/first",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": 2,
-					"name": "pages/identity_show/identity_show",
-					"pathName": "pages/identity_show/identity_show",
+					"name": "pages/myself/myself",
+					"pathName": "pages/myself/myself",
 					"query": "",
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "pages/identity/identity",
-					"pathName": "pages/identity/identity",
+					"id": 3,
+					"name": "pages/create_appointment/create_appointment",
+					"pathName": "pages/create_appointment/create_appointment",
 					"query": "",
 					"scene": null
 				}

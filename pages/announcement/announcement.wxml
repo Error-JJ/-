@@ -2,10 +2,10 @@
 <view class="top">
     <image src="../../pic/22.jpg" class="top_img" />
     <text class="iconfont icon-fanhui top_back" bindtap="back"></text>
-    <view class="title">通知</view>
+    <view class="title">公告</view>
 </view>
 <!-- 内容 -->
-<scroll-view scroll-y="{{true}}" class="placard" refresher-enabled="{{true}}" refresher-threshold="{{50}}" refresher-default-style="black" refresher-triggered="{{triggered}}" bindrefresherrefresh="onRefresh" scroll-with-animation="{{true}}">
+<scroll-view scroll-y="{{true}}" scroll-top="{{scrolltop}}" class="placard" refresher-enabled="{{true}}" refresher-threshold="{{50}}" refresher-default-style="black" refresher-triggered="{{triggered}}" bindrefresherrefresh="onRefresh" scroll-with-animation="{{true}}">
     <!-- 单条公告 -->
     <view class="placard_one" wx:for="{{ placard }}">
         <!-- 图标 -->
