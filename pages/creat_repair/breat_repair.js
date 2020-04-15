@@ -23,8 +23,8 @@ Page({
         success: (result) => {
           var upTask = wx.uploadFile({
             url: 'https://www.baidu.com',
-            filePath: result.tempFilePaths,
-            name: result.tempFilePaths,
+            filePath: result.tempFilePaths[0],
+            name: "img",
             formData: {},
             success: (result2)=>{
               var ch= "img["+e.currentTarget.id+"].src";

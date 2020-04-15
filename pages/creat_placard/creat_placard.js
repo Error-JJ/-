@@ -114,7 +114,7 @@ Page({
           }
           var upTask = wx.uploadFile({
             url: "https://www.baidu.com",
-            filePath:result.tempFilePaths ,
+            filePath:result.tempFilePaths[0] ,
             name:'img' ,
             formData: {},
             success: (result2)=>{
@@ -193,9 +193,10 @@ Page({
         sizeType: ['original', 'compressed'],
         sourceType: ['camera'],
         success: (result) => {
+          console.log(result.tempFilePaths[0]);
           var upTask = wx.uploadFile({
-            url: 'https://bilibili.com',
-            filePath:result.tempFilePaths ,
+            url: 'https://www.baidu.com',
+            filePath:result.tempFilePaths[0] ,
             name:'img' ,
             formData: {},
             success: (result2)=>{

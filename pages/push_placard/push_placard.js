@@ -29,8 +29,8 @@ Page({
   //聚焦内容
   focus_mes: function (e) {
     var that = this;
-    var h = e.detail.height + 85;
-    var h2 = 900 - e.detail.height * 2;
+    var h = e.detail.height + 40;
+    var h2 = 90 - e.detail.height * 2;
     this.setData({
       keyheight: "height: " + h + "px;",
       input_height: "height:" + h2 + "rpx;",
@@ -87,7 +87,7 @@ Page({
           };
           var upTask = wx.uploadFile({
             url: 'https://bilibili.com',
-            filePath:result.tempFilePaths ,
+            filePath:result.tempFilePaths[0] ,
             name:"img" ,
             formData: {},
             success: (result2)=>{
@@ -135,7 +135,7 @@ Page({
   //点击照片
   go_pic: function () {
     var that = this;
-    var h = this.data.keyheight_value + 85;
+    var h = this.data.keyheight_value + 40;
     var h2 = 900 - this.data.keyheight_value * 2;
     this.setData({
       pic_open: true,
@@ -173,7 +173,7 @@ Page({
         success: (result) => {
           var upTask = wx.uploadFile({
             url: 'https://www.baidu.com',
-            filePath: result.tempFilePaths,
+            filePath: result.tempFilePaths[0],
             name: 'img',
             formData: {},
             success: (result2)=>{

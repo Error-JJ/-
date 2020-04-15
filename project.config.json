@@ -80,8 +80,8 @@
 				},
 				{
 					"id": 3,
-					"name": "pages/create_appointment/create_appointment",
-					"pathName": "pages/create_appointment/create_appointment",
+					"name": "pages/push_placard/push_placard",
+					"pathName": "pages/push_placard/push_placard",
 					"query": "",
 					"scene": null
 				}
